@@ -14,15 +14,19 @@ int main(int argc, char **argv)
     }
     InitWindow(640, 480, "rbxmx test");
     DataModel *datamodel = DataModel_new();
-    Instance *mdl = LoadModelRBXMX(argv[1]);
+    int mdlCount;
+    Instance **mdls = LoadModelRBXMX(argv[1], &mdlCount);
 
-    if (!mdl)
+    if (!mdls)
     {
         perror("file error");
         return 0;
     }
 
-    Instance_SetParent(mdl, datamodel->Workspace);
+    for (int i = 0; i < mdlCount; i++)
+    {
+        Instance_SetParent(mdls[i], datamodel->Workspace);
+    }
 
     SetTargetFPS(60);
     DisableCursor();
