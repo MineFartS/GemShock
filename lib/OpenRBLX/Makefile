@@ -1,4 +1,3 @@
-# Generated using Helium v2.2.0 (https://github.com/tornadocookie/he)
 
 PLATFORM?=linux64-debug
 DISTDIR?=build
