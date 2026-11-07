@@ -2,16 +2,37 @@
   "name": "GemShock",
   "tree": {
     "$className": "DataModel",
+    "Lighting": {
+      "$path": "src/Lighting"
+    },
     "ReplicatedStorage": {
-      "$path": "src/Shared"
+      "$path": "src/ReplicatedStorage"
     },
     "ServerScriptService": {
-      "$path": "src/Server"
+      "$path": "src/ServerScriptService"
+    },
+    "ServerStorage": {
+      "$path": "src/ServerStorage"
+    },
+    "StarterGui": {
+      "$path": "src/StarterGui"
+    },
+    "StarterPack": {
+      "$path": "src/StarterPack"
     },
     "StarterPlayer": {
+      "StarterCharacterScripts": {
+        "$path": "src/StarterPlayer/StarterCharacterScripts"
+      },
       "StarterPlayerScripts": {
-        "$path": "src/Client"
+        "$path": "src/StarterPlayer/StarterPlayerScripts"
       }
+    },
+    "TextChatService": {
+      "$path": "src/TextChatService"
+    },
+    "Workspace": {
+      "$path": "src/Workspace"
     }
   }
 }
