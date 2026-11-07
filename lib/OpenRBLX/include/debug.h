@@ -6,7 +6,7 @@
 #include <stdlib.h>
 
 #ifdef _WIN32
-    #include <windows.h>
+    #include <windows_safe.h>
     #define gettid() GetCurrentThreadId()
 #else
     #include <sys/syscall.h>

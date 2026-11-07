@@ -11,7 +11,7 @@ DEFAULT_DEBUG_CHANNEL(instance);
 
 #ifdef _WIN32
 #include <libloaderapi.h>
-#include <windows.h>
+#include <windows_safe.h>
 
 static void *get_symbol_from_ourselves(const char *symbol)
 {
