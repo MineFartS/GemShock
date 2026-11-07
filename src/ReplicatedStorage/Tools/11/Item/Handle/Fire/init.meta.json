@@ -1,0 +1,9 @@
+{
+  "className": "Fire",
+  "properties": {
+    "Color": [1, 0.502, 0],
+    "Heat": 25,
+    "SecondaryColor": [1, 0, 0],
+    "Size": 9
+  }
+}

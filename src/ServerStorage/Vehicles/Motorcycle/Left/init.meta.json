@@ -1,0 +1,14 @@
+{
+  "className": "Part",
+  "properties": {
+    "Anchored": true,
+    "BackParamA": 0,
+    "BackParamB": 0,
+    "BottomSurface": "Smooth",
+    "CanCollide": false,
+    "CFrame": [-915.9205, 46.5147, 1450.1494, 0, 0, 1, 0, 1, 0, -1, 0, 0],
+    "FormFactor": "Custom",
+    "Size": [0.8505, 0.3402, 0.8505],
+    "Transparency": 1
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "className": "Frame",
+  "properties": {
+    "BackgroundColor3": [1, 1, 1],
+    "Position": [[0.0, -7.0], [0.0, 117.0]],
+    "Size": [[0.0, 200.0], [0.0, 25.0]],
+    "Style": "DropShadow"
+  }
+}

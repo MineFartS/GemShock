@@ -1,0 +1,11 @@
+{
+  "className": "VehicleSeat",
+  "properties": {
+    "BottomSurface": "Smooth",
+    "CFrame": [-0.023, 19.7677, 15.0649, 1, 0, 0, 0, 1, 0, 0, 0, 1],
+    "Color": [27, 42, 53],
+    "HeadsUpDisplay": false,
+    "Size": [2, 0.1, 2],
+    "TopSurface": "Smooth"
+  }
+}

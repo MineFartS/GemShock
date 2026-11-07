@@ -1,0 +1,21 @@
+{
+  "className": "MeshPart",
+  "originalName": "Meshes/Tred",
+  "properties": {
+    "Anchored": true,
+    "CFrame": [-800.1642, 52.8811, 1461.3329, -1.0, -0.0004, -0.0001, -0.0004, 1.0, 0.0002, 0.0001, 0.0002, -1],
+    "Color": [17, 17, 17],
+    "CustomPhysicalProperties": {
+      "acousticAbsorption": 1.0,
+      "density": 1.602,
+      "elasticity": 0.05,
+      "elasticityWeight": 1.0,
+      "friction": 2.0,
+      "frictionWeight": 5.0
+    },
+    "InitialSize": [2.5308, 5.9171, 5.9147],
+    "Material": "Sand",
+    "MeshContent": "rbxassetid://952219101",
+    "Size": [2.3, 4, 4]
+  }
+}

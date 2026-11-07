@@ -1,0 +1,13 @@
+{
+  "className": "MeshPart",
+  "properties": {
+    "CanCollide": false,
+    "CFrame": [-2.1465, 21.7455, 4.916, 0, 0, -1, 0, 1, 0, 1, 0, 0],
+    "Color": [81, 103, 54],
+    "InitialSize": [13.6631, 1.933, 17.285],
+    "Material": "Metal",
+    "MeshContent": "rbxassetid://5050980594",
+    "RenderFidelity": "Precise",
+    "Size": [2.1845, 0.3091, 2.7636]
+  }
+}

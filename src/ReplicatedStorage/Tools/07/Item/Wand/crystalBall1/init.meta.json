@@ -1,0 +1,12 @@
+{
+  "className": "Part",
+  "properties": {
+    "BottomSurface": "Smooth",
+    "CFrame": [-1390.9254, 302.93, 1809.7435, 1, 0, 0, 0, 1, 0, 0, 0, 1],
+    "Color": [170, 0, 255],
+    "Material": "Glass",
+    "Shape": "Ball",
+    "Size": [1.0, 1.0, 1.0],
+    "TopSurface": "Smooth"
+  }
+}

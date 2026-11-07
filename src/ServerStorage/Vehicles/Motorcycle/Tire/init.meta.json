@@ -1,0 +1,20 @@
+{
+  "className": "UnionOperation",
+  "properties": {
+    "Anchored": true,
+    "CanCollide": false,
+    "CFrame": [-918.7272, 47.025, 1451, 0, 0, 1, 0, 1, 0, -1, 0, 0],
+    "Color": [27, 42, 53],
+    "CustomPhysicalProperties": {
+      "acousticAbsorption": 1.0,
+      "density": 0.7,
+      "elasticity": 0.5,
+      "elasticityWeight": 1.0,
+      "friction": 1.3,
+      "frictionWeight": 1.0
+    },
+    "RenderFidelity": "Precise",
+    "Size": [0.4083, 2.0412, 2.0413],
+    "UsePartColor": true
+  }
+}

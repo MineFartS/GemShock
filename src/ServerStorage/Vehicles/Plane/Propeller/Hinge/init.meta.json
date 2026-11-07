@@ -1,0 +1,7 @@
+{
+  "className": "Motor",
+  "properties": {
+    "C0": [0, 0, 0, 1, 0, 0, 0, 0, -1, 0, 1, 0],
+    "MaxVelocity": 0.5
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "className": "MeshPart",
+  "originalName": "Meshes/Harness2",
+  "properties": {
+    "Anchored": true,
+    "CanCollide": false,
+    "CFrame": [-799.9336, 51.3541, 1455.41, 1.0, -0.0004, 0.0001, 0.0004, 1.0, -0.0002, -0.0001, 0.0002, 1],
+    "Color": [255, 0, 0],
+    "InitialSize": [1.562, 2.1176, 1.6151],
+    "MeshContent": "rbxassetid://950035146",
+    "Size": [2.792, 2.6876, 2.6151]
+  }
+}

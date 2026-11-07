@@ -1,0 +1,13 @@
+{
+  "className": "Humanoid",
+  "properties": {
+    "BreakJointsOnDeath": false,
+    "DisplayDistanceType": "None",
+    "HealthDisplayDistance": 158.8233,
+    "JumpHeight": 11.4353,
+    "JumpPower": 63.0126,
+    "NameDisplayDistance": 0,
+    "NameOcclusion": "NoOcclusion",
+    "WalkSpeed": 25.4117
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "className": "ScrollingFrame",
+  "properties": {
+    "BackgroundColor3": [0, 0, 0],
+    "BackgroundTransparency": 0.5,
+    "BorderSizePixel": 0,
+    "BottomImageContent": "rbxasset://textures/ui/Scroll/scroll-middle.png",
+    "CanvasSize": [[0.0, 5200.0], [0.0, 0.0]],
+    "Position": [[0.0, 10.0], [0.0, 2.0]],
+    "ScrollBarThickness": 8,
+    "Size": [[0.0, 260.0], [0.0, 3.0]],
+    "TopImageContent": "rbxasset://textures/ui/Scroll/scroll-middle.png"
+  }
+}

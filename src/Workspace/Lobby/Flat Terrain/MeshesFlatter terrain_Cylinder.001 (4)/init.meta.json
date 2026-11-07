@@ -1,0 +1,14 @@
+{
+  "className": "MeshPart",
+  "originalName": "Meshes/Flatter terrain_Cylinder.001 (4)",
+  "properties": {
+    "Anchored": true,
+    "CastShadow": false,
+    "CFrame": [-201.5955, 618.1273, 1447.6185, 0.8942, 0, -0.4476, 0, 1, 0, 0.4476, 0, 0.8942],
+    "Color": [124, 92, 70],
+    "InitialSize": [30.0255, 12.2105, 24.3812],
+    "MeshContent": "rbxassetid://7688646983",
+    "RenderFidelity": "Precise",
+    "Size": [26.2398, 9.802, 25.6956]
+  }
+}

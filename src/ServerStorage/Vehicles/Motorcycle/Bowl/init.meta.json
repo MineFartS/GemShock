@@ -1,0 +1,13 @@
+{
+  "className": "Part",
+  "properties": {
+    "Anchored": true,
+    "CanCollide": false,
+    "CFrame": [-918.3444, 48.6835, 1451, 0, 1, 0, 0, 0, -1, -1, 0, 0],
+    "Color": [242, 243, 243],
+    "FormFactor": "Plate",
+    "Reflectance": 0.2,
+    "Size": [0.8505, 0.3402, 0.8505],
+    "Transparency": 1
+  }
+}

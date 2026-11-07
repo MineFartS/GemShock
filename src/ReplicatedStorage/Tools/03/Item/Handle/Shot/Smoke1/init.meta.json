@@ -1,0 +1,29 @@
+{
+  "className": "ParticleEmitter",
+  "properties": {
+    "Color": [{
+        "color": [0.2745, 0.2745, 0.2745],
+        "time": 0.0
+      }, {
+        "color": [0.2745, 0.2745, 0.2745],
+        "time": 1.0
+      }],
+    "EmissionDirection": "Front",
+    "Enabled": false,
+    "Lifetime": [1.25, 1.5],
+    "LightEmission": 0.1,
+    "Rotation": [0, 360],
+    "RotSpeed": [10, 10],
+    "Size": [{
+        "envelope": 0.0,
+        "time": 0.0,
+        "value": 1.0
+      }, {
+        "envelope": 0.0,
+        "time": 1.0,
+        "value": 3.0
+      }],
+    "Speed": [5, 7],
+    "Texture": "http://www.roblox.com/asset/?id=244514423"
+  }
+}

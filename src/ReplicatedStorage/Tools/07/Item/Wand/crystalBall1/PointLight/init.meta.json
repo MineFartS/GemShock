@@ -1,0 +1,6 @@
+{
+  "className": "PointLight",
+  "properties": {
+    "Color": [0, 1, 1]
+  }
+}

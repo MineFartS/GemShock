@@ -1,0 +1,7 @@
+{
+  "className": "ColorCorrectionEffect",
+  "properties": {
+    "Contrast": 0.25,
+    "Saturation": 0.6
+  }
+}

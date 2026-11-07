@@ -1,0 +1,10 @@
+{
+  "className": "ImageLabel",
+  "properties": {
+    "BackgroundColor3": [1, 1, 1],
+    "BackgroundTransparency": 1,
+    "ImageContent": "http://www.roblox.com/asset?id=154875516",
+    "Position": [[0.0, 0.0], [0.0, 48.0]],
+    "Size": [[1.0, 0.0], [0.0, 37.0]]
+  }
+}

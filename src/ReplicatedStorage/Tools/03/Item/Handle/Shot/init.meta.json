@@ -1,0 +1,14 @@
+{
+  "className": "Part",
+  "properties": {
+    "BottomSurface": "Smooth",
+    "CanCollide": false,
+    "CFrame": [-1390.7638, 300.8206, 1809.3757, 0, 0, -1, 0, 1, 0, 1, 0, 0],
+    "Color": [255, 255, 255],
+    "Material": "Neon",
+    "Shape": "Cylinder",
+    "Size": [0.06, 0.1114, 0.1154],
+    "TopSurface": "Smooth",
+    "Transparency": 1
+  }
+}

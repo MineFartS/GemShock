@@ -1,0 +1,9 @@
+{
+  "className": "UIListLayout",
+  "properties": {
+    "HorizontalAlignment": "Center",
+    "HorizontalFlex": "SpaceEvenly",
+    "VerticalAlignment": "Center",
+    "VerticalFlex": "SpaceEvenly"
+  }
+}

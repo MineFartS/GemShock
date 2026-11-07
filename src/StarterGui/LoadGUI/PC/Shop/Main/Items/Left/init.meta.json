@@ -1,0 +1,12 @@
+{
+  "className": "Frame",
+  "properties": {
+    "BackgroundColor3": [0, 0, 0],
+    "BackgroundTransparency": 0.85,
+    "BorderColor3": [0, 0, 0],
+    "BorderSizePixel": 0,
+    "LayoutOrder": 1,
+    "Position": [[-0.0007, 0.0], [0.0223, 0.0]],
+    "Size": [[0.6738, 0.0], [0.9537, 0.0]]
+  }
+}

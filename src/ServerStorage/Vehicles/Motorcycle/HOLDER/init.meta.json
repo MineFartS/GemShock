@@ -1,0 +1,17 @@
+{
+  "className": "Part",
+  "properties": {
+    "Anchored": true,
+    "BackSurface": "SmoothNoOutlines",
+    "BottomSurface": "SmoothNoOutlines",
+    "CanCollide": false,
+    "CFrame": [-913.9644, 47.025, 1452.1907, 0, 0, 1, -1, 0.0, 0, -0.0, -1, 0],
+    "FormFactor": "Custom",
+    "FrontSurface": "SmoothNoOutlines",
+    "LeftSurface": "SmoothNoOutlines",
+    "RightSurface": "SmoothNoOutlines",
+    "Size": [0.8505, 0.3402, 0.3402],
+    "TopSurface": "SmoothNoOutlines",
+    "Transparency": 1
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "className": "Part",
+  "properties": {
+    "BottomSurface": "Smooth",
+    "CanCollide": false,
+    "CFrame": [5.9481, 20.9948, -2.0131, 0, 0, 1, 0, 1, 0, -1, 0, 0],
+    "Material": "SmoothPlastic",
+    "Shape": "Cylinder",
+    "Size": [0.11, 0.9106, 0.9106],
+    "TopSurface": "Smooth"
+  }
+}

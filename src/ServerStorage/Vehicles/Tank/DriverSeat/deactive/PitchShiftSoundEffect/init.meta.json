@@ -1,0 +1,6 @@
+{
+  "className": "PitchShiftSoundEffect",
+  "properties": {
+    "Octave": 0.5
+  }
+}

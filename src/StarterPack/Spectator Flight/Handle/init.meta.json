@@ -1,0 +1,11 @@
+{
+  "className": "Part",
+  "properties": {
+    "BottomSurface": "Weld",
+    "CFrame": [8.6772, 2.6683, -180.392, -0.5556, 0.3934, -0.7325, 0.5772, 0.8166, 0.0008, 0.5985, -0.4224, -0.6808],
+    "FormFactor": "Symmetric",
+    "Locked": true,
+    "Size": [5, 3, 1],
+    "Transparency": 1
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "className": "Part",
+  "properties": {
+    "BottomSurface": "Smooth",
+    "CFrame": [-1390.9254, 300.13, 1809.7435, 0.9659, 0.2588, 0, -0.2588, 0.9659, 0, 0, 0, 1],
+    "Color": [90, 76, 66],
+    "Material": "Wood",
+    "Size": [0.2, 1.3, 0.3],
+    "TopSurface": "Smooth",
+    "Transparency": 1
+  }
+}

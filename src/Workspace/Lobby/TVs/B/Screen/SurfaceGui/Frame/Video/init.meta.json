@@ -1,0 +1,11 @@
+{
+  "className": "VideoFrame",
+  "properties": {
+    "Active": true,
+    "Looped": true,
+    "Playing": true,
+    "Size": [[1.0, 0.0], [1.0, 0.0]],
+    "VideoContent": "rbxassetid://5608304953",
+    "Volume": 0.1
+  }
+}

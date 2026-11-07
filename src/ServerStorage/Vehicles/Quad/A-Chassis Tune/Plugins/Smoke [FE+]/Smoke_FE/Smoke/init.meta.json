@@ -1,0 +1,79 @@
+{
+  "className": "ParticleEmitter",
+  "properties": {
+    "Acceleration": [0, 0.2, 0],
+    "EmissionDirection": "Bottom",
+    "Lifetime": [12, 15],
+    "LightEmission": 0.8,
+    "Rate": 0,
+    "Size": [{
+        "envelope": 0.0,
+        "time": 0.0,
+        "value": 2.5
+      }, {
+        "envelope": 0.0,
+        "time": 0.0402,
+        "value": 2.75
+      }, {
+        "envelope": 3.3125,
+        "time": 0.1159,
+        "value": 3.3125
+      }, {
+        "envelope": 0.0,
+        "time": 0.187,
+        "value": 4.25
+      }, {
+        "envelope": 0.0,
+        "time": 0.2581,
+        "value": 5.4375
+      }, {
+        "envelope": 0.0,
+        "time": 0.309,
+        "value": 6.1875
+      }, {
+        "envelope": 0.0,
+        "time": 0.3881,
+        "value": 7.0
+      }, {
+        "envelope": 0.0,
+        "time": 0.4355,
+        "value": 7.5
+      }, {
+        "envelope": 0.0,
+        "time": 0.5004,
+        "value": 7.75
+      }, {
+        "envelope": 0.0,
+        "time": 0.5891,
+        "value": 7.8125
+      }, {
+        "envelope": 0.0,
+        "time": 0.7024,
+        "value": 8.0
+      }, {
+        "envelope": 0.0,
+        "time": 0.8235,
+        "value": 8.9375
+      }, {
+        "envelope": 0.0,
+        "time": 1.0,
+        "value": 10.0
+      }],
+    "Speed": [-2, -2],
+    "SpreadAngle": [12, 15],
+    "Texture": "rbxassetid://486096258",
+    "Transparency": [{
+        "envelope": 0.0,
+        "time": 0.0,
+        "value": 0.2
+      }, {
+        "envelope": 0.0,
+        "time": 0.9984,
+        "value": 0.9812
+      }, {
+        "envelope": 0.0,
+        "time": 1.0,
+        "value": 0.2
+      }]
+  }
+}

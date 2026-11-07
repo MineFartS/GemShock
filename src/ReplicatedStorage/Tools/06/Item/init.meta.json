@@ -1,0 +1,9 @@
+{
+  "className": "Tool",
+  "properties": {
+    "CanBeDropped": false,
+    "Grip": [0, -0.0921, -0.2609, -1, 0, 0, 0, 0.9999, -0.0106, 0, -0.0106, -0.9999],
+    "TextureContent": "http://www.roblox.com/asset/?id=97399907029232",
+    "ToolTip": "AK47"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "className": "Part",
+  "properties": {
+    "Anchored": true,
+    "BottomSurface": "Smooth",
+    "CanCollide": false,
+    "CFrame": [-799.4357, 51.5173, 1452.9137, -0.707, -0.0004, 0.7072, -0.0001, 1.0, 0.0005, -0.7072, 0.0003, -0.707],
+    "Color": [17, 17, 17],
+    "Material": "SmoothPlastic",
+    "Shape": "Cylinder",
+    "Size": [2.7881, 0.2073, 2.0729],
+    "TopSurface": "Smooth"
+  }
+}

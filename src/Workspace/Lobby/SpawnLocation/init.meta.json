@@ -1,0 +1,12 @@
+{
+  "className": "SpawnLocation",
+  "properties": {
+    "Anchored": true,
+    "BottomSurface": "Smooth",
+    "CanCollide": false,
+    "CFrame": [-292.4361, 624.9982, 1424.187, 0.8827, 0, 0.4699, 0, 1, 0, -0.4699, 0, 0.8827],
+    "Size": [12, 1, 12],
+    "TopSurface": "Smooth",
+    "Transparency": 1
+  }
+}

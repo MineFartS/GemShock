@@ -1,0 +1,10 @@
+{
+  "className": "SpotLight",
+  "properties": {
+    "Angle": 180,
+    "Brightness": 3.8,
+    "Color": [1, 0.6941, 0.0824],
+    "Enabled": false,
+    "Range": 15
+  }
+}

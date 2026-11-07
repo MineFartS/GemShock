@@ -1,0 +1,19 @@
+{
+  "className": "Part",
+  "properties": {
+    "Anchored": true,
+    "BackSurface": "SmoothNoOutlines",
+    "BottomSurface": "SmoothNoOutlines",
+    "CanCollide": false,
+    "CFrame": [-800.0742, 51.2553, 1445.9042, 1.0, -0.0002, 0.0001, 0.0002, 1.0, 0.0006, -0.0001, -0.0006, 1.0],
+    "Color": [202, 191, 163],
+    "FormFactor": "Custom",
+    "FrontSurface": "SmoothNoOutlines",
+    "LeftSurface": "SmoothNoOutlines",
+    "Material": "SmoothPlastic",
+    "RightSurface": "SmoothNoOutlines",
+    "Size": [1, 0.8, 0.4],
+    "TopSurface": "SmoothNoOutlines",
+    "Transparency": 1
+  }
+}

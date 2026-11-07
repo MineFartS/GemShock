@@ -1,0 +1,14 @@
+{
+  "className": "UnionOperation",
+  "properties": {
+    "Anchored": true,
+    "CanCollide": false,
+    "CastShadow": false,
+    "CFrame": [992.4335, 151.3028, -609.4826, 1, 0, 0, 0, 1, 0, 0, 0, 1],
+    "Color": [248, 248, 248],
+    "Material": "Neon",
+    "RenderFidelity": "Precise",
+    "Size": [18.0001, 220.1321, 59.0473],
+    "Transparency": 1
+  }
+}

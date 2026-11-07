@@ -1,0 +1,6 @@
+{
+  "className": "BlockMesh",
+  "properties": {
+    "Scale": [1, 1, 0.9]
+  }
+}

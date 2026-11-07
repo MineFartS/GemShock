@@ -1,0 +1,8 @@
+{
+  "className": "BillboardGui",
+  "properties": {
+    "Enabled": false,
+    "Size": [[1.0, 0.0], [1.0, 0.0]],
+    "SizeOffset": [-0.5, 0]
+  }
+}

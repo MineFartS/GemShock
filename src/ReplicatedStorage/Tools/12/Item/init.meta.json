@@ -1,0 +1,9 @@
+{
+  "className": "Tool",
+  "properties": {
+    "CanBeDropped": false,
+    "Grip": [0.7, 0, -0.5, 0, 0, -1, -1, 0, 0, 0, 1, 0],
+    "TextureContent": "rbxassetid://113919119083201",
+    "ToolTip": "Rocket Launcher"
+  }
+}

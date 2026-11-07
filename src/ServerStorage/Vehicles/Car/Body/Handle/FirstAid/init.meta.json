@@ -1,0 +1,8 @@
+{
+  "className": "Sound",
+  "properties": {
+    "AudioContent": "http://www.roblox.com/asset/?id=35275769",
+    "PlaybackSpeed": 2,
+    "Volume": 0.9
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "className": "TextBox",
+  "properties": {
+    "BackgroundColor3": [0, 0, 0],
+    "BackgroundTransparency": 0.3,
+    "BorderColor3": [1, 1, 1],
+    "FontFace": {
+      "cachedFaceId": null,
+      "family": "rbxasset://fonts/families/SourceSansPro.json",
+      "style": "Normal",
+      "weight": "Regular"
+    },
+    "Position": [[0.4, 10.0], [0.0, -2.0]],
+    "Size": [[0.0, 75.0], [1.5, 0.0]],
+    "Text": "",
+    "TextColor3": [1, 1, 1],
+    "TextSize": 14,
+    "TextXAlignment": "Left"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "className": "TextLabel",
+  "originalName": "//INSPARE",
+  "properties": {
+    "BackgroundColor3": [1, 1, 1],
+    "BackgroundTransparency": 1,
+    "BorderSizePixel": 0,
+    "FontFace": {
+      "cachedFaceId": null,
+      "family": "rbxasset://fonts/families/SourceSansPro.json",
+      "style": "Normal",
+      "weight": "Light"
+    },
+    "Position": [[1.0, -20.0], [0.0, 20.0]],
+    "Text": "A-Chassis 6 by //INSPARE",
+    "TextColor3": [1, 1, 1],
+    "TextSize": 14,
+    "TextStrokeColor3": [0.3922, 0.3922, 0.3922],
+    "TextStrokeTransparency": 0.95,
+    "TextXAlignment": "Right",
+    "ZIndex": 3
+  }
+}

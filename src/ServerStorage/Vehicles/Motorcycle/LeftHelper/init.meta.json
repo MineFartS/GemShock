@@ -1,0 +1,14 @@
+{
+  "className": "Part",
+  "properties": {
+    "Anchored": true,
+    "BottomSurface": "Studs",
+    "CanCollide": false,
+    "CFrame": [-915.9205, 46.5147, 1451.8505, 1, 0, -0.0, 0, -1, 0.0, -0.0, -0.0, -1],
+    "Color": [107, 50, 124],
+    "FormFactor": "Custom",
+    "Size": [0.8505, 0.3402, 0.8505],
+    "TopSurface": "Inlet",
+    "Transparency": 1
+  }
+}

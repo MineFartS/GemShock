@@ -1,0 +1,7 @@
+{
+  "className": "Sparkles",
+  "properties": {
+    "SparkleColor": [1, 0, 1],
+    "TimeScale": 0.3
+  }
+}

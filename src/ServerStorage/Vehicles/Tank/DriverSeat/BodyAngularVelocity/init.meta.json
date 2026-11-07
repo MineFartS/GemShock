@@ -1,0 +1,7 @@
+{
+  "className": "BodyAngularVelocity",
+  "properties": {
+    "AngularVelocity": [0, 0, 0],
+    "MaxTorque": [0, 999999999, 0]
+  }
+}

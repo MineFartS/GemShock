@@ -1,0 +1,7 @@
+{
+  "className": "Tool",
+  "properties": {
+    "TextureContent": "rbxassetid://127036786576097",
+    "ToolTip": "Respawn Wand"
+  }
+}

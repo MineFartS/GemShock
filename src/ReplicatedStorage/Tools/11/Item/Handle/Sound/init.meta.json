@@ -1,0 +1,6 @@
+{
+  "className": "Sound",
+  "properties": {
+    "AudioContent": "rbxasset://sounds/unsheath.wav"
+  }
+}

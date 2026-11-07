@@ -1,0 +1,19 @@
+{
+  "className": "Trail",
+  "properties": {
+    "LightEmission": 1,
+    "LightInfluence": 1,
+    "MaxLength": 5,
+    "MinLength": 0.5,
+    "TextureMode": "Static",
+    "Transparency": [{
+        "envelope": 0.0,
+        "time": 0.0,
+        "value": 0.0
+      }, {
+        "envelope": 0.0,
+        "time": 1.0,
+        "value": 0.0
+      }]
+  }
+}

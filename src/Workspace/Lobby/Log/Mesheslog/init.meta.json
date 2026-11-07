@@ -1,0 +1,16 @@
+{
+  "className": "MeshPart",
+  "originalName": "Meshes/log",
+  "properties": {
+    "Anchored": true,
+    "CanCollide": false,
+    "CastShadow": false,
+    "CFrame": [-283.0961, 600.1702, 1456.6661, -0.665, 0, -0.7468, 0, 1, 0, 0.7468, 0, -0.665],
+    "Color": [124, 92, 70],
+    "InitialSize": [50, 17.2427, 18.3689],
+    "Material": "SmoothPlastic",
+    "MeshContent": "rbxassetid://6349136797",
+    "RenderFidelity": "Precise",
+    "Size": [14.6894, 6.2477, 7.1168]
+  }
+}

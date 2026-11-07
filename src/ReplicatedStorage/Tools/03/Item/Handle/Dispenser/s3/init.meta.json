@@ -1,0 +1,42 @@
+{
+  "className": "ParticleEmitter",
+  "properties": {
+    "Acceleration": [0, 3, 0],
+    "Color": [{
+        "color": [0.9804, 0.9804, 0.9804],
+        "time": 0.0
+      }, {
+        "color": [0.9804, 0.9804, 0.9804],
+        "time": 1.0
+      }],
+    "EmissionDirection": "Front",
+    "Enabled": false,
+    "Lifetime": [1, 1.5],
+    "LightInfluence": 1,
+    "Rate": 1000,
+    "Rotation": [0, 100],
+    "RotSpeed": [-200, 200],
+    "Size": [{
+        "envelope": 0.0,
+        "time": 0.0,
+        "value": 0.2186
+      }, {
+        "envelope": 0.0,
+        "time": 1.0,
+        "value": 0.0
+      }],
+    "Speed": [0, 1.5],
+    "SpreadAngle": [2, 2],
+    "Texture": "rbxasset://textures/particles/smoke_main.dds",
+    "Transparency": [{
+        "envelope": 0.0,
+        "time": 0.0,
+        "value": 0.98
+      }, {
+        "envelope": 0.0,
+        "time": 1.0,
+        "value": 0.98
+      }],
+    "VelocityInheritance": 0.1
+  }
+}

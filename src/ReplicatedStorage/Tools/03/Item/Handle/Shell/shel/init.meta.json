@@ -1,0 +1,65 @@
+{
+  "className": "ParticleEmitter",
+  "properties": {
+    "Acceleration": [22, -55, -5],
+    "Enabled": false,
+    "Lifetime": [10, 10],
+    "Rate": 1,
+    "Rotation": [4, 9],
+    "RotSpeed": [555, 555],
+    "Size": [{
+        "envelope": 0.0,
+        "time": 0.0,
+        "value": 0.3
+      }, {
+        "envelope": 0.0,
+        "time": 1.0,
+        "value": 0.3
+      }],
+    "Speed": [5, 7],
+    "SpreadAngle": [10, 10],
+    "Texture": "rbxassetid://841747868",
+    "Transparency": [{
+        "envelope": 0.0,
+        "time": 0.0,
+        "value": 0.0
+      }, {
+        "envelope": 0.0,
+        "time": 0.1258,
+        "value": 0.0
+      }, {
+        "envelope": 0.0,
+        "time": 0.3129,
+        "value": 0.0
+      }, {
+        "envelope": 0.0,
+        "time": 0.3877,
+        "value": 0.0
+      }, {
+        "envelope": 0.0,
+        "time": 0.4877,
+        "value": 0.0
+      }, {
+        "envelope": 0.0,
+        "time": 0.5613,
+        "value": 0.0
+      }, {
+        "envelope": 0.0,
+        "time": 0.5936,
+        "value": 0.0
+      }, {
+        "envelope": 0.0,
+        "time": 0.6396,
+        "value": 0.0
+      }, {
+        "envelope": 0.0,
+        "time": 0.7837,
+        "value": 0.0
+      }, {
+        "envelope": 0.0,
+        "time": 1.0,
+        "value": 0.0
+      }],
+    "VelocityInheritance": 2
+  }
+}

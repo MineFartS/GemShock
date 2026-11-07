@@ -1,0 +1,18 @@
+{
+  "className": "TextLabel",
+  "properties": {
+    "BackgroundColor3": [1, 1, 1],
+    "BackgroundTransparency": 1,
+    "BorderSizePixel": 0,
+    "FontFace": {
+      "cachedFaceId": null,
+      "family": "rbxasset://fonts/families/SourceSansPro.json",
+      "style": "Normal",
+      "weight": "Bold"
+    },
+    "Size": [[1.0, 0.0], [0.0, 10.0]],
+    "Text": "Music",
+    "TextColor3": [1, 1, 1],
+    "TextSize": 24
+  }
+}

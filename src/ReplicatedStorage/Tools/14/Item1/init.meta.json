@@ -1,0 +1,8 @@
+{
+  "className": "Tool",
+  "properties": {
+    "Grip": [1.5, 0, -2.3, 1, 0, 0, 0, 1, 0, 0, 0, 1],
+    "TextureContent": "rbxassetid://97490844927659",
+    "ToolTip": "Flight Power"
+  }
+}

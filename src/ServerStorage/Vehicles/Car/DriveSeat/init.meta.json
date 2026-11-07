@@ -1,0 +1,30 @@
+{
+  "className": "VehicleSeat",
+  "properties": {
+    "Anchored": true,
+    "BottomSurface": "Smooth",
+    "CanCollide": false,
+    "CFrame": [-799.6802, 49.762, 1453.8754, 1.0, -0.0, 0.0, 0.0, 1, -0.0, -0.0, 0.0, 1],
+    "CustomPhysicalProperties": {
+      "acousticAbsorption": 1.0,
+      "density": 0.01,
+      "elasticity": 0.0,
+      "elasticityWeight": 1.0,
+      "friction": 0.3,
+      "frictionWeight": 1.0
+    },
+    "FrontParamA": -0.1,
+    "FrontParamB": 0.1,
+    "FrontSurface": "Motor",
+    "FrontSurfaceInput": "Constant",
+    "Material": "SmoothPlastic",
+    "MaxSpeed": 0,
+    "Size": [2, 1, 2],
+    "TopParamA": 0,
+    "TopParamB": 0,
+    "TopSurface": "Hinge",
+    "Torque": 0,
+    "Transparency": 1,
+    "TurnSpeed": 0
+  }
+}

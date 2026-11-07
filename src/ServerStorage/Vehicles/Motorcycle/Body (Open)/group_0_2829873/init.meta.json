@@ -1,0 +1,15 @@
+{
+  "className": "MeshPart",
+  "properties": {
+    "Anchored": true,
+    "CanCollide": false,
+    "CFrame": [-916.624, 48.3957, 1451.0564, 1, 0.0, 0, 0, 0, -1, -0.0, 1, 0],
+    "Color": [0, 170, 0],
+    "DoubleSided": true,
+    "InitialSize": [95.956, 55.999, 61.1934],
+    "Material": "Metal",
+    "MeshContent": "rbxassetid://11773219545",
+    "PivotOffset": [0.1488, -0.199, 2.4612, 1, 0, 0, 0, 1, 0, 0, 0, 1],
+    "Size": [4.1099, 2.3985, 2.621]
+  }
+}

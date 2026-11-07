@@ -1,0 +1,7 @@
+{
+  "className": "Part",
+  "properties": {
+    "Material": "DiamondPlate",
+    "Size": [0.5, 1.55, 3.5]
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "className": "MeshPart",
+  "originalName": "Meshes/asset pacsk_Cylinder (1)",
+  "properties": {
+    "Anchored": true,
+    "CanCollide": false,
+    "CFrame": [-231.0912, 611.1806, 1460.9193, 0.8942, 0, -0.4476, 0, 1, 0, 0.4476, 0, 0.8942],
+    "Color": [124, 92, 70],
+    "InitialSize": [8.2543, 48.4013, 8.2543],
+    "MeshContent": "rbxassetid://7687237589",
+    "RenderFidelity": "Precise",
+    "Size": [3.9293, 23.0407, 3.9293]
+  }
+}

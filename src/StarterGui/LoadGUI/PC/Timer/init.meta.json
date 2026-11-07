@@ -1,0 +1,23 @@
+{
+  "className": "TextLabel",
+  "properties": {
+    "AnchorPoint": [0.5, 0.5],
+    "BackgroundColor3": [0, 0.6667, 0],
+    "BackgroundTransparency": 1,
+    "BorderColor3": [0, 0, 0],
+    "BorderSizePixel": 0,
+    "FontFace": {
+      "cachedFaceId": null,
+      "family": "rbxasset://fonts/families/Michroma.json",
+      "style": "Normal",
+      "weight": "Bold"
+    },
+    "Position": [[0.4985, 0.0], [0.0829, 0.0]],
+    "Size": [[0.0, 238.0], [0.0, 64.0]],
+    "Text": "--:--",
+    "TextColor3": [1, 1, 1],
+    "TextScaled": true,
+    "TextSize": 26,
+    "TextWrapped": true
+  }
+}

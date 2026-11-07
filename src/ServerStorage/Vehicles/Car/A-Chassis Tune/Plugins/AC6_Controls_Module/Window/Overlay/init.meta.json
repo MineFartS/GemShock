@@ -1,0 +1,22 @@
+{
+  "className": "TextLabel",
+  "properties": {
+    "BackgroundColor3": [1, 1, 1],
+    "BackgroundTransparency": 0.5,
+    "BorderSizePixel": 0,
+    "FontFace": {
+      "cachedFaceId": null,
+      "family": "rbxasset://fonts/families/SourceSansPro.json",
+      "style": "Italic",
+      "weight": "Regular"
+    },
+    "Size": [[1.0, 0.0], [1.0, 0.0]],
+    "Text": "[Press a key to assign or Enter to cancel]",
+    "TextColor3": [1, 1, 1],
+    "TextSize": 28,
+    "TextStrokeColor3": [0.1843, 0.1843, 0.1843],
+    "TextStrokeTransparency": 0,
+    "Visible": false,
+    "ZIndex": 4
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "className": "SpotLight",
+  "properties": {
+    "Angle": 60,
+    "Enabled": false,
+    "Range": 40
+  }
+}

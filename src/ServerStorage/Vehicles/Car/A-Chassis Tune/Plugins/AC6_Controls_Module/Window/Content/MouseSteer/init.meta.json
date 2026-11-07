@@ -1,0 +1,22 @@
+{
+  "className": "TextButton",
+  "properties": {
+    "Active": false,
+    "BackgroundColor3": [0.1569, 0.1569, 0.1569],
+    "BackgroundTransparency": 0.5,
+    "BorderSizePixel": 0,
+    "FontFace": {
+      "cachedFaceId": null,
+      "family": "rbxasset://fonts/families/SourceSansPro.json",
+      "style": "Normal",
+      "weight": "Regular"
+    },
+    "Position": [[1.0, 170.0], [0.0, 53.0]],
+    "Selectable": false,
+    "Size": [[0.0, 300.0], [0.0, 15.0]],
+    "Text": "MouseMove",
+    "TextColor3": [0.6902, 0.6902, 0.6902],
+    "TextSize": 14,
+    "ZIndex": 3
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "className": "HingeConstraint",
+  "properties": {
+    "ActuatorType": "Servo",
+    "AngularSpeed": 1,
+    "MotorMaxTorque": 100,
+    "ServoMaxTorque": 99999997952
+  }
+}

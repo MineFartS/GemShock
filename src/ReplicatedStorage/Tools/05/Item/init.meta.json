@@ -1,0 +1,9 @@
+{
+  "className": "Tool",
+  "properties": {
+    "CanBeDropped": false,
+    "Grip": [0, -0.1, 0.75, 1, 0, 0, 0, 1, 0, 0, 0, 1],
+    "TextureContent": "http://www.roblox.com/asset/?id=711364260",
+    "ToolTip": "Laser Gun"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "className": "TextButton",
+  "properties": {
+    "BackgroundColor3": [1, 1, 1],
+    "BackgroundTransparency": 1,
+    "BorderSizePixel": 0,
+    "FontFace": {
+      "cachedFaceId": null,
+      "family": "rbxasset://fonts/families/Arial.json",
+      "style": "Normal",
+      "weight": "Bold"
+    },
+    "Position": [[0.5, 150.0], [1.0, -80.0]],
+    "Size": [[0.0, 100.0], [0.0, 20.0]],
+    "Text": "0 SPS",
+    "TextColor3": [1, 1, 1],
+    "TextSize": 24,
+    "TextStrokeColor3": [0.8353, 0.8353, 0.8353],
+    "TextStrokeTransparency": 0.9,
+    "TextTransparency": 0.1,
+    "TextXAlignment": "Right",
+    "Visible": false,
+    "ZIndex": 2
+  }
+}

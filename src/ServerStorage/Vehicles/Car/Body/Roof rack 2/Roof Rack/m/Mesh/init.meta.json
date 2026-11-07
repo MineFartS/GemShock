@@ -1,0 +1,7 @@
+{
+  "className": "SpecialMesh",
+  "properties": {
+    "MeshType": "Cylinder",
+    "Scale": [1, 0.7, 1]
+  }
+}

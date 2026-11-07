@@ -1,0 +1,28 @@
+{
+  "className": "Part",
+  "properties": {
+    "Anchored": true,
+    "BackSurface": "SmoothNoOutlines",
+    "BottomSurface": "SmoothNoOutlines",
+    "CanCollide": false,
+    "CFrame": [-913.1989, 47.9818, 1451, 0, 0, 1, 0, 1, 0, -1, 0, 0],
+    "Color": [196, 40, 28],
+    "CustomPhysicalProperties": {
+      "acousticAbsorption": 1.0,
+      "density": 0.7,
+      "elasticity": 0.0,
+      "elasticityWeight": 1.0,
+      "friction": 0.7,
+      "frictionWeight": 1.0
+    },
+    "FormFactor": "Custom",
+    "FrontSurface": "SmoothNoOutlines",
+    "LeftSurface": "SmoothNoOutlines",
+    "Material": "SmoothPlastic",
+    "Reflectance": 0.4,
+    "RightSurface": "SmoothNoOutlines",
+    "Size": [0.5954, 0.2126, 0.1701],
+    "TopSurface": "SmoothNoOutlines",
+    "Transparency": 1
+  }
+}

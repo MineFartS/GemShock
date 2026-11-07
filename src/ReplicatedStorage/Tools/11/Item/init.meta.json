@@ -1,0 +1,8 @@
+{
+  "className": "Tool",
+  "properties": {
+    "Grip": [0, -3.2, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1],
+    "TextureContent": "rbxassetid://93921044513408",
+    "ToolTip": "Fire Sword"
+  }
+}

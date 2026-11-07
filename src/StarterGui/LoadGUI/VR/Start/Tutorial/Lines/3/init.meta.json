@@ -1,0 +1,22 @@
+{
+  "className": "TextLabel",
+  "properties": {
+    "BackgroundColor3": [1, 1, 1],
+    "BackgroundTransparency": 1,
+    "BorderColor3": [0, 0, 0],
+    "BorderSizePixel": 0,
+    "FontFace": {
+      "cachedFaceId": null,
+      "family": "rbxasset://fonts/families/FredokaOne.json",
+      "style": "Normal",
+      "weight": "Regular"
+    },
+    "Position": [[0.1276, 0.0], [0.0112, 0.0]],
+    "Size": [[1.0, 0.0], [0.33, 0.0]],
+    "Text": "The goal is to survive the rising lava and other players. You can find vehicles around the map or buy tools and weapons from the item shop.",
+    "TextColor3": [1, 1, 1],
+    "TextScaled": true,
+    "TextSize": 14,
+    "TextWrapped": true
+  }
+}

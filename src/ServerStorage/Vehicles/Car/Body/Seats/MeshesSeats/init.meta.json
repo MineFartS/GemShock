@@ -1,0 +1,13 @@
+{
+  "className": "MeshPart",
+  "originalName": "Meshes/Seats",
+  "properties": {
+    "Anchored": true,
+    "CanCollide": false,
+    "CFrame": [-797.9057, 51.5963, 1456.0909, -1.0, -0.0004, -0.0001, -0.0004, 1.0, 0.0002, 0.0001, 0.0002, -1],
+    "Color": [17, 17, 17],
+    "InitialSize": [6.4975, 3.9608, 7.2444],
+    "MeshContent": "rbxassetid://949567286",
+    "Size": [6.4975, 3.9608, 7.2444]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "className": "TextLabel",
+  "properties": {
+    "BackgroundTransparency": 1,
+    "FontFace": {
+      "cachedFaceId": null,
+      "family": "rbxasset://fonts/families/SourceSansPro.json",
+      "style": "Normal",
+      "weight": "Bold"
+    },
+    "Size": [[1.0, 0.0], [1.0, 0.0]],
+    "Text": "FLY",
+    "TextColor3": [1, 1, 1],
+    "TextSize": 18,
+    "TextStrokeTransparency": 0,
+    "TextWrapped": true,
+    "ZIndex": 11
+  }
+}

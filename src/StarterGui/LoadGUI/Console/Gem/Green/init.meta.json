@@ -1,0 +1,25 @@
+{
+  "className": "TextLabel",
+  "properties": {
+    "AnchorPoint": [0.5, 0.5],
+    "BackgroundColor3": [0, 0.6667, 0.9804],
+    "BackgroundTransparency": 1,
+    "BorderColor3": [0, 0, 0],
+    "BorderSizePixel": 0,
+    "ClipsDescendants": true,
+    "FontFace": {
+      "cachedFaceId": null,
+      "family": "rbxasset://fonts/families/ComicNeueAngular.json",
+      "style": "Normal",
+      "weight": "Regular"
+    },
+    "Position": [[0.4557, 0.0], [0.1844, 0.0]],
+    "Size": [[0.0, 198.0], [0.0, 50.0]],
+    "SizeConstraint": "RelativeYY",
+    "Text": "",
+    "TextColor3": [1, 1, 1],
+    "TextScaled": true,
+    "TextSize": 40,
+    "TextWrapped": true
+  }
+}

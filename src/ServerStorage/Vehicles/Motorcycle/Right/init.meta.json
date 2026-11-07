@@ -1,0 +1,25 @@
+{
+  "className": "Part",
+  "properties": {
+    "Anchored": true,
+    "BottomSurface": "Smooth",
+    "CanCollide": false,
+    "CFrame": [-918.7271, 47.025, 1452.1907, 0, 0.4226, -0.9063, 0, 0.9063, 0.4226, 1, 0, 0],
+    "Color": [27, 42, 53],
+    "CustomPhysicalProperties": {
+      "acousticAbsorption": 1.0,
+      "density": 0.7,
+      "elasticity": 0.0,
+      "elasticityWeight": 1.0,
+      "friction": 0.7,
+      "frictionWeight": 1.0
+    },
+    "FormFactor": "Custom",
+    "LeftSurface": "Studs",
+    "Material": "SmoothPlastic",
+    "Size": [0.3402, 0.6804, 1.0206],
+    "TopSurface": "Smooth",
+    "Transparency": 1,
+    "Velocity": [0.0127, -0.0404, -0.0223]
+  }
+}

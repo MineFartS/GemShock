@@ -1,0 +1,23 @@
+{
+  "className": "TextButton",
+  "properties": {
+    "AnchorPoint": [1, 1],
+    "BackgroundColor3": [0, 0.6667, 0.9804],
+    "BorderColor3": [0, 0, 0],
+    "BorderSizePixel": 0,
+    "FontFace": {
+      "cachedFaceId": null,
+      "family": "rbxasset://fonts/families/ComicNeueAngular.json",
+      "style": "Normal",
+      "weight": "Regular"
+    },
+    "Position": [[0.98, 0.0], [0.98, 0.0]],
+    "Size": [[0.1, 1.0], [0.1, 1.0]],
+    "Text": "Item Shop",
+    "TextColor3": [1, 1, 1],
+    "TextScaled": true,
+    "TextSize": 32,
+    "TextWrapped": true,
+    "Visible": false
+  }
+}

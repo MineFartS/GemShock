@@ -1,0 +1,8 @@
+{
+  "className": "BodyGyro",
+  "properties": {
+    "D": 33.3554,
+    "MaxTorque": [0, 0, 6.1523],
+    "P": 7.2336
+  }
+}

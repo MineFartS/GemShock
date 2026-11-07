@@ -1,0 +1,10 @@
+{
+  "className": "Lighting",
+  "keepUnknowns": true,
+  "properties": {
+    "Attributes": {
+      "RBX_LightingTechnologyUnifiedMigration": true,
+      "RBX_OriginalTechnologyOnFileLoad": 3
+    }
+  }
+}

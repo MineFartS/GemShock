@@ -1,0 +1,8 @@
+{
+  "className": "Tool",
+  "properties": {
+    "Grip": [0.0376, -0.2227, 0.0563, 0.0255, 0.0047, -0.9997, -0.0089, 0.9999, 0.0045, 0.9996, 0.0088, 0.0255],
+    "TextureContent": "http://www.roblox.com/asset/?id=913025958",
+    "ToolTip": "Grenade"
+  }
+}

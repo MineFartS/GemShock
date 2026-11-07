@@ -1,0 +1,14 @@
+{
+  "className": "MeshPart",
+  "originalName": "Meshes/asset pacsk_Cone.004 (1)",
+  "properties": {
+    "Anchored": true,
+    "CanCollide": false,
+    "CFrame": [-231.2323, 618.994, 1460.8096, 0.8941, -0.0144, -0.4476, 0.0161, 0.9999, 0, 0.4475, -0.0072, 0.8942],
+    "Color": [31, 128, 29],
+    "InitialSize": [14.1755, 10.8877, 14.2254],
+    "MeshContent": "rbxassetid://7687238359",
+    "RenderFidelity": "Precise",
+    "Size": [5.6075, 8.6755, 5.8739]
+  }
+}

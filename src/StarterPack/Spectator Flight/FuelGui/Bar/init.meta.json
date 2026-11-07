@@ -1,0 +1,11 @@
+{
+  "className": "Frame",
+  "properties": {
+    "AnchorPoint": [1, 0.5],
+    "BackgroundColor3": [0.1059, 0.1647, 0.2078],
+    "Position": [[0.98, 0.0], [0.5, 0.0]],
+    "Size": [[0.06, 0.0], [0.5, 0.0]],
+    "SizeConstraint": "RelativeYY",
+    "Visible": false
+  }
+}

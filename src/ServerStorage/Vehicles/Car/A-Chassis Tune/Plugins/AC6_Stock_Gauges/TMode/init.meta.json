@@ -1,0 +1,23 @@
+{
+  "className": "TextLabel",
+  "properties": {
+    "BackgroundColor3": [1, 0.6667, 0],
+    "BackgroundTransparency": 0.5,
+    "BorderSizePixel": 0,
+    "FontFace": {
+      "cachedFaceId": null,
+      "family": "rbxasset://fonts/families/Arial.json",
+      "style": "Normal",
+      "weight": "Bold"
+    },
+    "Position": [[0.5, -165.0], [1.0, -40.0]],
+    "Size": [[0.0, 40.0], [0.0, 20.0]],
+    "Text": "A/T",
+    "TextColor3": [1, 1, 1],
+    "TextSize": 18,
+    "TextStrokeColor3": [1, 0.6667, 0],
+    "TextStrokeTransparency": 0.9,
+    "TextTransparency": 0.1,
+    "Visible": false
+  }
+}

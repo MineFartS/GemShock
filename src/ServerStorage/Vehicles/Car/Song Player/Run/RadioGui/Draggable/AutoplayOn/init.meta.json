@@ -1,0 +1,12 @@
+{
+  "className": "ImageButton",
+  "properties": {
+    "BackgroundColor3": [1, 1, 1],
+    "BackgroundTransparency": 1,
+    "BorderSizePixel": 0,
+    "ImageContent": "http://www.roblox.com/asset?id=155035483",
+    "Position": [[0.5, 66.0], [0.0, 59.0]],
+    "Size": [[0.0, 15.0], [0.0, 15.0]],
+    "ZIndex": 2
+  }
+}

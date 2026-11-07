@@ -1,0 +1,13 @@
+{
+  "className": "Part",
+  "properties": {
+    "Anchored": true,
+    "BottomSurface": "Smooth",
+    "CFrame": [-795.1473, 55.1935, 1462.9652, -1.0, 0.0072, -0.0005, -0.0005, -0.0006, 1.0, 0.0072, 1.0, 0.0006],
+    "Color": [199, 172, 120],
+    "Material": "Concrete",
+    "Shape": "Cylinder",
+    "Size": [0.21, 0.32, 0.31],
+    "TopSurface": "Smooth"
+  }
+}

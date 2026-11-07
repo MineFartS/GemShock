@@ -1,0 +1,11 @@
+{
+  "className": "Seat",
+  "properties": {
+    "Anchored": true,
+    "CanCollide": false,
+    "CFrame": [-799.5192, 49.9026, 1458.0223, 1.0, -0.0004, 0.0001, 0.0004, 1.0, -0.0002, -0.0001, 0.0002, 1],
+    "Color": [248, 248, 248],
+    "Size": [2.05, 1, 2],
+    "Transparency": 1
+  }
+}

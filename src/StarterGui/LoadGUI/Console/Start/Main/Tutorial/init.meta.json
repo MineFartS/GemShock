@@ -1,0 +1,22 @@
+{
+  "className": "TextButton",
+  "properties": {
+    "AnchorPoint": [1, 1],
+    "BackgroundColor3": [0, 0.6667, 0.9804],
+    "BorderColor3": [0, 0, 0],
+    "BorderSizePixel": 0,
+    "FontFace": {
+      "cachedFaceId": null,
+      "family": "rbxasset://fonts/families/Sarpanch.json",
+      "style": "Normal",
+      "weight": "Regular"
+    },
+    "Position": [[0.8909, -10.0], [0.7344, -10.0]],
+    "Size": [[0.75, 0.0], [0.2, 0.0]],
+    "Text": "How To Play",
+    "TextColor3": [1, 1, 1],
+    "TextScaled": true,
+    "TextSize": 32,
+    "TextWrapped": true
+  }
+}

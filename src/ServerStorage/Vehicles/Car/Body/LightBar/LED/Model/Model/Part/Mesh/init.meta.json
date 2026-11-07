@@ -1,0 +1,7 @@
+{
+  "className": "SpecialMesh",
+  "properties": {
+    "MeshType": "Sphere",
+    "Scale": [0.3, 0.3, 0.3]
+  }
+}

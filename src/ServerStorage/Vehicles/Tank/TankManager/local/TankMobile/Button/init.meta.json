@@ -1,0 +1,10 @@
+{
+  "className": "ImageButton",
+  "properties": {
+    "BackgroundColor3": [0, 0, 0],
+    "BackgroundTransparency": 1,
+    "ImageContent": "rbxassetid://112177124162560",
+    "Position": [[0.9257, 0.0], [0.2814, 0.0]],
+    "Size": [[0.0735, 0.0], [0.1374, 0.0]]
+  }
+}

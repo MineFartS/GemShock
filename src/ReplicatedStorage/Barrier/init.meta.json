@@ -1,0 +1,10 @@
+{
+  "className": "Part",
+  "properties": {
+    "Anchored": true,
+    "BottomSurface": "Smooth",
+    "Size": [2048, 1, 2048],
+    "TopSurface": "Smooth",
+    "Transparency": 1
+  }
+}

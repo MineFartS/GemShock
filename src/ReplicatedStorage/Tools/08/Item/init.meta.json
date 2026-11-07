@@ -1,0 +1,8 @@
+{
+  "className": "Tool",
+  "properties": {
+    "Grip": [0.015, -0.215, 1.625, 1, 0, 0, 0, 1, 0, 0, 0, 1],
+    "TextureContent": "rbxassetid://112181879137070",
+    "ToolTip": "Flame Thrower"
+  }
+}

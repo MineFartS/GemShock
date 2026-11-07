@@ -1,0 +1,20 @@
+{
+  "className": "VehicleSeat",
+  "properties": {
+    "Anchored": true,
+    "BackSurface": "SmoothNoOutlines",
+    "BottomSurface": "SmoothNoOutlines",
+    "CanCollide": false,
+    "CFrame": [-916, 47.0037, 1451, 0, 0, 1, 0, 1, 0, -1, 0, 0],
+    "FrontSurface": "SmoothNoOutlines",
+    "HeadsUpDisplay": false,
+    "LeftSurface": "SmoothNoOutlines",
+    "MaxSpeed": 102.061,
+    "RightSurface": "SmoothNoOutlines",
+    "Size": [3.402, 0.8505, 0.8505],
+    "TopSurface": "SmoothNoOutlines",
+    "Torque": 1.2305,
+    "Transparency": 1,
+    "TurnSpeed": 0
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "className": "ScrollingFrame",
+  "properties": {
+    "BackgroundColor3": [0, 0, 0],
+    "BackgroundTransparency": 0.3,
+    "BorderSizePixel": 0,
+    "BottomImageContent": "rbxasset://textures/blackBkg_square.png",
+    "CanvasSize": [[0.0, 0.0], [0.0, 200.0]],
+    "MidImageContent": "rbxasset://textures/blackBkg_square.png",
+    "Position": [[1.0, 10.0], [0.0, -5.0]],
+    "Size": [[0.0, 150.0], [0.0, 200.0]],
+    "TopImageContent": "rbxasset://textures/blackBkg_square.png",
+    "Visible": false
+  }
+}

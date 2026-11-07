@@ -1,0 +1,10 @@
+{
+  "className": "ImageLabel",
+  "properties": {
+    "Active": true,
+    "BackgroundColor3": [0.7569, 0.7529, 0.7647],
+    "BackgroundTransparency": 1,
+    "ImageContent": "rbxassetid://36949810",
+    "Size": [[1.0, 0.0], [1.0, 0.0]]
+  }
+}

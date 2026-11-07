@@ -1,0 +1,10 @@
+{
+  "className": "SurfaceLight",
+  "properties": {
+    "Brightness": 20,
+    "Color": [1, 0, 0],
+    "Enabled": false,
+    "Face": "Back",
+    "Range": 20
+  }
+}

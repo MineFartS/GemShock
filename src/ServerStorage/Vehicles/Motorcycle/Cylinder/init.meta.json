@@ -1,0 +1,27 @@
+{
+  "className": "UnionOperation",
+  "properties": {
+    "Anchored": true,
+    "BackSurface": "SmoothNoOutlines",
+    "BottomSurface": "SmoothNoOutlines",
+    "CFrame": [-916.686, 47.6212, 1451.4905, 0, 0, 1, 0.7071, 0.7071, 0, -0.7071, 0.7071, 0],
+    "Color": [163, 162, 165],
+    "CustomPhysicalProperties": {
+      "acousticAbsorption": 1.0,
+      "density": 0.7,
+      "elasticity": 0.5,
+      "elasticityWeight": 1.0,
+      "friction": 1.3,
+      "frictionWeight": 1.0
+    },
+    "FrontSurface": "SmoothNoOutlines",
+    "LeftSurface": "SmoothNoOutlines",
+    "Material": "SmoothPlastic",
+    "RenderFidelity": "Precise",
+    "RightSurface": "SmoothNoOutlines",
+    "Size": [0.5954, 0.4253, 0.5954],
+    "TopSurface": "SmoothNoOutlines",
+    "Transparency": 1,
+    "UsePartColor": true
+  }
+}

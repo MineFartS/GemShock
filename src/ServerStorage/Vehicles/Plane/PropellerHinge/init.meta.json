@@ -1,0 +1,16 @@
+{
+  "className": "Part",
+  "properties": {
+    "BackSurface": "SmoothNoOutlines",
+    "BottomSurface": "SmoothNoOutlines",
+    "CFrame": [-766.9912, 30.5434, 1366.2041, 1.0, 0, 0.002, -0.002, 0.0225, 0.9997, -0.0, -0.9997, 0.0225],
+    "Color": [99, 95, 98],
+    "FormFactor": "Custom",
+    "FrontSurface": "SmoothNoOutlines",
+    "LeftSurface": "SmoothNoOutlines",
+    "Material": "Metal",
+    "RightSurface": "SmoothNoOutlines",
+    "Size": [1, 0.8, 1],
+    "TopSurface": "SmoothNoOutlines"
+  }
+}

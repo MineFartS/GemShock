@@ -1,0 +1,13 @@
+{
+  "className": "Part",
+  "properties": {
+    "BottomSurface": "Smooth",
+    "CFrame": [-1390.9254, 302.93, 1809.7435, 1, 0, 0, 0, 1, 0, 0, 0, 1],
+    "Color": [0, 255, 255],
+    "Material": "ForceField",
+    "Shape": "Ball",
+    "Size": [1.4, 1.4, 1.4],
+    "TopSurface": "Smooth",
+    "Transparency": 0.5
+  }
+}
