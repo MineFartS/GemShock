@@ -5,8 +5,13 @@
 #include <string.h>
 #include <stdlib.h>
 
-#include <sys/syscall.h>
-#define gettid() syscall(SYS_gettid)
+#ifdef _WIN32
+    #include <windows.h>
+    #define gettid() GetCurrentThreadId()
+#else
+    #include <sys/syscall.h>
+    #define gettid() syscall(SYS_gettid)
+#endif
 
 const char *debugstr_vector3(Vector3 v)
 {
@@ -35,7 +40,9 @@ const char *debugstr_color3(Color3 c)
     return debugstr_vector3((Vector3){c.R, c.G, c.B});
 }
 
-#include <unistd.h>
+#ifndef _WIN32
+    #include <unistd.h>
+#endif
 
 void dbg_printf(const char *type, const char *channel, const char *func, const char *restrict format, ...)
 {
