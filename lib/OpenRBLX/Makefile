@@ -26,6 +26,8 @@ EXEC_EXTENSION=.exe
 LIB_EXTENSION=.dll
 LIB_EXTENSION_STATIC=(null)
 
+SHELL=sh.exe
+
 CXX=g++
 RAYLIB_DLL=-lraylibdll
 CFLAGS+=-O2
