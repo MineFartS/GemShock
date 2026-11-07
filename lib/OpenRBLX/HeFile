@@ -5,7 +5,6 @@ UseRaylib True
 
 ExtraCFlag -Iinclude
 ExtraCFlag -Ilib/xml/include
-ExtraCFlag -Wno-incompatible-pointer-types
 
 ExtraCFlag -Ilib/luau/VM/include
 ExtraCFlag -Ilib/luau/Compiler/include

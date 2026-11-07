@@ -115,6 +115,7 @@ CFLAGS+=-Ilib/zstd/include
 CFLAGS+=-D PLATFORM=\"$(PLATFORM)\"
 CFLAGS+=-Iinclude
 CFLAGS+=-Ilib/xml/include
+CFLAGS+=-Wno-discarded-qualifiers
 CFLAGS+=-Wno-incompatible-pointer-types
 CFLAGS+=-Ilib/luau/VM/include
 CFLAGS+=-Ilib/luau/Compiler/include
