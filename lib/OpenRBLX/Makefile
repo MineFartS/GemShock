@@ -116,17 +116,20 @@ CFLAGS+=-Ilib/zstd/include
 CFLAGS+=-D PLATFORM=\"$(PLATFORM)\"
 CFLAGS+=-Iinclude
 CFLAGS+=-Ilib/xml/include
-CFLAGS+=-Wno-discarded-qualifiers
-CFLAGS+=-Wno-incompatible-pointer-types
 CFLAGS+=-Ilib/luau/VM/include
 CFLAGS+=-Ilib/luau/Compiler/include
 CFLAGS+=-Ilib/luau/Common/include
 CFLAGS+=-Ilib/luau/Ast/include
 CFLAGS+=-Ilib/luau/VM/src
+
+C_FLAGS+=-Wno-discarded-qualifiers
+C_FLAGS+=-Wno-incompatible-pointer-types
+
 CXXFLAGS+=-DLUA_API='extern
 CXXFLAGS+="C"'
 CXXFLAGS+=-DLUACODE_API='extern
 CXXFLAGS+="C"'
+CXXFLAGS+=-Wno-attributes
 
 LDFLAGS+=-lcurl
 
@@ -346,7 +349,7 @@ $(DISTDIR)/player$(EXEC_EXTENSION): $(player_SOURCES) $(player_CXX_SOURCES)
 	$(CC) -o $@ $^ $(LDFLAGS)
 
 $(DISTDIR)/%.o: %.c
-	$(CC) -c $^ $(CFLAGS) -o $@
+	$(CC) -c $^ $(CFLAGS) $(C_FLAGS) -o $@
 
 $(DISTDIR)/%.o: %.cpp
 	$(CXX) -c $^ $(CFLAGS) $(CXXFLAGS) -o $@

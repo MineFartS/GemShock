@@ -432,7 +432,7 @@ static void apply_property_chunk_to_instances(PropertiesChunk chunk, InstanceChu
         }
     }
 
-    if (values != -1 && values != chunkData) free(values);
+    if (values != (void*)-1 && values != chunkData) free(values);
 }
 
 static int32_t *LoadReferences(int length, unsigned char *data)

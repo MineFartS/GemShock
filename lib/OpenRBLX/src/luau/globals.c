@@ -103,7 +103,7 @@ static int luau_require(lua_State *L)
         size_t bytecodesize = 0;
         char *bytecode;
         struct lua_CompileOptions compopts = {
-            .disabledBuiltins = {"typeof", NULL}
+            .disabledBuiltins = "typeof"
         };
 
         // Set the script global
