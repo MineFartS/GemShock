@@ -1,0 +1,6 @@
+
+[submodule "lib/OpenRBLX"]
+	path = lib/OpenRBLX
+	url = https://github.com/MineFartS/OpenRBLX
+    ignore = dirty
+
