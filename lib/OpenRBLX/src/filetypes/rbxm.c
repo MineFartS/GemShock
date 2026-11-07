@@ -9,7 +9,7 @@
 #include "part.h"
 #include "script.h"
 //#include <endian.h>
-#include "zstd.h"
+#include "zstd_decompress.h"
 #include "modulescript.h"
 
 #include "debug.h"
