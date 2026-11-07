@@ -7,11 +7,12 @@ DISTDIR?=build
 
 RAYLIB_NAME=raylib5.5-$(PLATFORM)
 
+CC=gcc
+
 ifeq ($(PLATFORM), linux64-debug)
 EXEC_EXTENSION=-debug
 LIB_EXTENSION=-debug.so
 LIB_EXTENSION_STATIC=(null)
-CC=gcc
 RAYLIB_DLL=-lraylib
 CFLAGS+=-g
 CFLAGS+=-D DEBUG
@@ -24,8 +25,8 @@ ifeq ($(PLATFORM), win64)
 EXEC_EXTENSION=.exe
 LIB_EXTENSION=.dll
 LIB_EXTENSION_STATIC=(null)
-CC=x86_64-w64-mingw32-gcc
-CXX=x86_64-w64-mingw32-g++
+
+CXX=g++
 RAYLIB_DLL=-lraylibdll
 CFLAGS+=-O2
 CFLAGS+=-D RELEASE
