@@ -1,12 +1,19 @@
+param([switch]$Force)
 Push-Location $PSScriptRoot
+
+if ($Force) {
+    Remove-Item "GemShock.rbxlx" -Force
+    Remove-Item "lib\OpenRBLX\build" -Force -Recurse
+    Remove-Item "lib\OpenRBLX\lib\luau\build" -Force -Recurse
+}
 
 $env:Path = "$PSScriptRoot\lib\w64devkit\bin;" + $env:Path
 
 git.exe submodule update --init
 
-& lib\argon.exe build -o GemShock.rbxlx
-
-Remove-Item "lib/OpenRBLX/build" -Force -Recurse
+if (-not (Test-Path "GemShock.rbxlx")) {
+    & lib\argon.exe build -o "GemShock.rbxlx"
+}
 
 Push-Location "$PSScriptRoot\lib\OpenRBLX\lib\luau\build\release" #========
 
