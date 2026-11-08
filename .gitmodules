@@ -1,9 +1,4 @@
 
-[submodule "lib/OpenRBLX"]
-	path = lib/OpenRBLX
-	url = https://github.com/MineFartS/OpenRBLX
-    ignore = dirty
-
 [submodule "lib/w64devkit"]
 	path = lib/w64devkit
 	url = https://github.com/MineFartsEmbed/w64devkit
