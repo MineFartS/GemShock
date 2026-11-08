@@ -60,15 +60,13 @@ LDFLAGS+=\
 	-Llib/raylib5.5-$(PLATFORM)/lib \
 	$(RAYLIB_DLL) \
 	-Wl,-rpath,lib/raylib5.5-$(PLATFORM)/lib \
+	lib/luau/build/release/libluau.a \
 	-lstdc++
 
 # ====================================================================
 # all (func)
 
 all: build \
-	build/lib/luau/VM/src \
-	build/lib/luau/Compiler/src \
-	build/lib/luau/Ast/src \
 	build/src \
 	build/src/luau \
 	build/lib/cJSON/src \
@@ -85,9 +83,6 @@ all: build \
 # Mk Build Dirs
 
 DIRS := \
-	build/lib/luau/VM/src \
-	build/lib/luau/Compiler/src \
-	build/lib/luau/Ast/src \
 	build/src \
 	build/src/luau \
 	build/lib/cJSON/src \
@@ -131,58 +126,6 @@ CFLAGS+=\
 # luau_CXX_SOURCES
 
 luau_CXX_SOURCES+=\
-	build/lib/luau/VM/src/lapi.o \
-	build/lib/luau/VM/src/laux.o \
-	build/lib/luau/VM/src/lbaselib.o \
-	build/lib/luau/VM/src/lbitlib.o \
-	build/lib/luau/VM/src/lbuffer.o \
-	build/lib/luau/VM/src/lbuflib.o \
-	build/lib/luau/VM/src/lbuiltins.o \
-	build/lib/luau/VM/src/lcorolib.o \
-	build/lib/luau/VM/src/ldblib.o \
-	build/lib/luau/VM/src/ldebug.o \
-	build/lib/luau/VM/src/ldo.o \
-	build/lib/luau/VM/src/lfunc.o \
-	build/lib/luau/VM/src/lgc.o \
-	build/lib/luau/VM/src/lgcdebug.o \
-	build/lib/luau/VM/src/linit.o \
-	build/lib/luau/VM/src/lmathlib.o \
-	build/lib/luau/VM/src/lmem.o \
-	build/lib/luau/VM/src/lnumprint.o \
-	build/lib/luau/VM/src/lobject.o \
-	build/lib/luau/VM/src/loslib.o \
-	build/lib/luau/VM/src/lperf.o \
-	build/lib/luau/VM/src/lstate.o \
-	build/lib/luau/VM/src/lstring.o \
-	build/lib/luau/VM/src/lstrlib.o \
-	build/lib/luau/VM/src/ltable.o \
-	build/lib/luau/VM/src/ltablib.o \
-	build/lib/luau/VM/src/ltm.o \
-	build/lib/luau/VM/src/ludata.o \
-	build/lib/luau/VM/src/lutf8lib.o \
-	build/lib/luau/VM/src/lveclib.o \
-	build/lib/luau/VM/src/lvmexecute.o \
-	build/lib/luau/VM/src/lvmload.o \
-	build/lib/luau/VM/src/lvmutils.o \
-	build/lib/luau/Compiler/src/BuiltinFolding.o \
-	build/lib/luau/Compiler/src/Builtins.o \
-	build/lib/luau/Compiler/src/BytecodeBuilder.o \
-	build/lib/luau/Compiler/src/Compiler.o \
-	build/lib/luau/Compiler/src/ConstantFolding.o \
-	build/lib/luau/Compiler/src/CostModel.o \
-	build/lib/luau/Compiler/src/lcode.o \
-	build/lib/luau/Compiler/src/TableShape.o \
-	build/lib/luau/Compiler/src/Types.o \
-	build/lib/luau/Compiler/src/ValueTracking.o \
-	build/lib/luau/Ast/src/Allocator.o \
-	build/lib/luau/Ast/src/Ast.o \
-	build/lib/luau/Ast/src/Confusables.o \
-	build/lib/luau/Ast/src/Cst.o \
-	build/lib/luau/Ast/src/Lexer.o \
-	build/lib/luau/Ast/src/Location.o \
-	build/lib/luau/Ast/src/Parser.o \
-	build/lib/luau/Ast/src/StringUtils.o \
-	build/lib/luau/Ast/src/TimeTrace.o \
 	build/src/datamodel.o \
 	build/src/instance.o \
 	build/src/rbxscriptsignal.o \
