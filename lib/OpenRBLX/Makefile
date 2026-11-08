@@ -8,8 +8,6 @@ RAYLIB_NAME=raylib5.5-$(PLATFORM)
 # ====================================================================
 # Platform Specific C/C++ Flags
 
-CC=gcc
-
 ifeq ($(PLATFORM), linux64-debug) #==================
 EXEC_EXTENSION=-debug
 LIB_EXTENSION=-debug.so
@@ -29,7 +27,6 @@ LIB_EXTENSION_STATIC=(null)
 
 SHELL=sh.exe
 
-CXX=g++
 RAYLIB_DLL=-lraylibdll
 CFLAGS+=-O2
 CFLAGS+=-D RELEASE
@@ -311,7 +308,7 @@ studio_SOURCES+=build/src/../studio/classes/corepackages.o
 studio_SOURCES+=build/src/../studio/classes/changehistoryservice.o
 
 build/studio$(EXEC_EXTENSION): $(studio_SOURCES) $(luau_CXX_SOURCES)
-	$(CC) -o $@ $^ $(LDFLAGS)
+	gcc -o $@ $^ $(LDFLAGS)
 
 # ====================================================================
 # Build Player
@@ -320,16 +317,16 @@ player_SOURCES+=build/src/../player/player.o
 player_SOURCES+=build/src/filetypes/rbxs.o
 
 build/player$(EXEC_EXTENSION): $(player_SOURCES) $(luau_CXX_SOURCES)
-	$(CC) -o $@ $^ $(LDFLAGS)
+	gcc -o $@ $^ $(LDFLAGS)
 
 # ====================================================================
 # Build o
 
 build/%.o: %.c
-	$(CC) -c $^ $(CFLAGS) $(C_FLAGS) -o $@
+	gcc -c $^ $(CFLAGS) $(C_FLAGS) -o $@
 
 build/%.o: %.cpp
-	$(CXX) -c $^ $(CFLAGS) $(CXXFLAGS) -o $@
+	g++ -c $^ $(CFLAGS) $(CXXFLAGS) -o $@
 
 # ====================================================================
 # clean (func)
