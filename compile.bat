@@ -7,7 +7,7 @@ git submodule update --init
 
 lib\argon build -o GemShock.rbxlx
 
-call :make clean
+rmdir /s /q "lib/OpenRBLX/build"
 
 call :make
 
