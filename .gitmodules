@@ -5,3 +5,11 @@
 	branch = x86
     ignore = dirty
 
+[submodule "res/rbx-test-files"]
+	path = lib/OpenRBLX/res/rbx-test-files
+    url = https://github.com/rojo-rbx/rbx-test-files/
+
+[submodule "lib/luau"]
+	path = lib/OpenRBLX/lib/luau
+	url = https://github.com/luau-lang/luau
+
