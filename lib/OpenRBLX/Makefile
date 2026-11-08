@@ -38,10 +38,19 @@ LDFLAGS+=-static-libgcc
 endif # =============================================
 
 curl_NAME=libcurl-$(PLATFORM)
-CFLAGS+=-Ilib/$(curl_NAME)/include
+
+# ====================================================================
+# LDFLAGS
+
 LDFLAGS+=-Llib/$(curl_NAME)/lib
 LDFLAGS+=-lcurl
 LDFLAGS+=-Wl,-rpath,lib/$(curl_NAME)/lib
+LDFLAGS+=-lcurl
+LDFLAGS+=-lm
+LDFLAGS+=-Llib/$(RAYLIB_NAME)/lib
+LDFLAGS+=$(RAYLIB_DLL)
+LDFLAGS+=-Wl,-rpath,lib/$(RAYLIB_NAME)/lib
+LDFLAGS+=-lstdc++
 
 # ====================================================================
 # all (func)
@@ -83,8 +92,9 @@ $(DIRS):
 	mkdir -p $@
 
 # ====================================================================
-# C/CXX Flags
+# CFLAGS
 
+CFLAGS+=-Ilib/$(curl_NAME)/include
 CFLAGS+=-Isrc
 CFLAGS+=-Iinclude
 CFLAGS+=-Ilib/xml/src
@@ -105,25 +115,7 @@ CFLAGS+=-Ilib/luau/Compiler/include
 CFLAGS+=-Ilib/luau/Common/include
 CFLAGS+=-Ilib/luau/Ast/include
 CFLAGS+=-Ilib/luau/VM/src
-
-C_FLAGS+=-Wno-discarded-qualifiers
-C_FLAGS+=-Wno-incompatible-pointer-types
-
-CXXFLAGS+=-DLUA_API='extern
-CXXFLAGS+="C"'
-CXXFLAGS+=-DLUACODE_API='extern
-CXXFLAGS+="C"'
-CXXFLAGS+=-Wno-attributes
-
-LDFLAGS+=-lcurl
-
 CFLAGS+=-Ilib/$(RAYLIB_NAME)/include
-
-LDFLAGS+=-lm
-LDFLAGS+=-Llib/$(RAYLIB_NAME)/lib
-LDFLAGS+=$(RAYLIB_DLL)
-LDFLAGS+=-Wl,-rpath,lib/$(RAYLIB_NAME)/lib
-LDFLAGS+=-lstdc++
 
 # ====================================================================
 # luau_CXX_SOURCES
@@ -291,7 +283,6 @@ luau_CXX_SOURCES+=build/src/luau/path2dcontrolpoint.o
 luau_CXX_SOURCES+=build/src/luau/numberrange.o
 luau_CXX_SOURCES+=build/src/luau/colorsequence.o
 luau_CXX_SOURCES+=build/src/luau/brickcolor.o
-
 luau_CXX_SOURCES+=build/src/filetypes/rbxlx.o
 luau_CXX_SOURCES+=build/src/filetypes/rbxmx.o
 luau_CXX_SOURCES+=build/src/../lib/xml/src/xml.o
@@ -320,13 +311,23 @@ build/player$(EXEC_EXTENSION): $(player_SOURCES) $(luau_CXX_SOURCES)
 	gcc -o $@ $^ $(LDFLAGS)
 
 # ====================================================================
-# Build o
+# Build C
 
 build/%.o: %.c
-	gcc -c $^ $(CFLAGS) $(C_FLAGS) -o $@
+	gcc -c $^ $(CFLAGS) \
+		-Wno-discarded-qualifiers \
+		-Wno-incompatible-pointer-types \
+		-o $@
+
+# ====================================================================
+# Build C++
 
 build/%.o: %.cpp
-	g++ -c $^ $(CFLAGS) $(CXXFLAGS) -o $@
+	g++ -c $^ $(CFLAGS) \
+		-DLUA_API='extern "C"' \
+		-DLUACODE_API='extern "C"' \
+		-Wno-attributes \
+		-o $@
 
 # ====================================================================
 # clean (func)
