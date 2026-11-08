@@ -5,9 +5,12 @@ PLATFORM?=linux64-debug
 
 RAYLIB_NAME=raylib5.5-$(PLATFORM)
 
+# ====================================================================
+# Platform Specific C/C++ Flags
+
 CC=gcc
 
-ifeq ($(PLATFORM), linux64-debug)
+ifeq ($(PLATFORM), linux64-debug) #==================
 EXEC_EXTENSION=-debug
 LIB_EXTENSION=-debug.so
 LIB_EXTENSION_STATIC=(null)
@@ -17,9 +20,9 @@ CFLAGS+=-D DEBUG
 CFLAGS+=-D EXEC_EXTENSION=\"-debug\"
 CFLAGS+=-D LIB_EXTENSION=\"-debug.so\"
 LDFLAGS+=-rdynamic
-endif
+endif # =============================================
 
-ifeq ($(PLATFORM), win64)
+ifeq ($(PLATFORM), win64) # =========================
 EXEC_EXTENSION=.exe
 LIB_EXTENSION=.dll
 LIB_EXTENSION_STATIC=(null)
@@ -35,13 +38,16 @@ CFLAGS+=-D LIB_EXTENSION=\".dll\"
 LDFLAGS+=-lws2_32
 LDFLAGS+=-static-libstdc++
 LDFLAGS+=-static-libgcc
-endif
+endif # =============================================
 
 curl_NAME=libcurl-$(PLATFORM)
 CFLAGS+=-Ilib/$(curl_NAME)/include
 LDFLAGS+=-Llib/$(curl_NAME)/lib
 LDFLAGS+=-lcurl
 LDFLAGS+=-Wl,-rpath,lib/$(curl_NAME)/lib
+
+# ====================================================================
+# all (func)
 
 all: build \
 	build/src/../lib/luau/VM/src \
@@ -59,6 +65,9 @@ all: build \
 	build/player$(EXEC_EXTENSION) \
 	deps
 
+# ====================================================================
+# Mk Build Dirs
+
 DIRS := build/src/../lib/luau/VM/src \
         build/src/../lib/luau/Compiler/src \
         build/src/../lib/luau/Ast/src \
@@ -75,6 +84,9 @@ DIRS := build/src/../lib/luau/VM/src \
 		build
 $(DIRS):
 	mkdir -p $@
+
+# ====================================================================
+# C/CXX Flags
 
 CFLAGS+=-Isrc
 CFLAGS+=-Iinclude
@@ -115,6 +127,9 @@ LDFLAGS+=-Llib/$(RAYLIB_NAME)/lib
 LDFLAGS+=$(RAYLIB_DLL)
 LDFLAGS+=-Wl,-rpath,lib/$(RAYLIB_NAME)/lib
 LDFLAGS+=-lstdc++
+
+# ====================================================================
+# luau_CXX_SOURCES
 
 luau_CXX_SOURCES+=build/src/../lib/luau/VM/src/lapi.o
 luau_CXX_SOURCES+=build/src/../lib/luau/VM/src/laux.o
@@ -287,6 +302,9 @@ luau_CXX_SOURCES+=build/src/filetypes/rbxm.o
 luau_CXX_SOURCES+=build/src/../lib/lz4/src/lz4.o
 luau_CXX_SOURCES+=build/src/../lib/zstd/src/zstd_decompress.o
 
+# ====================================================================
+# Build Studio
+
 studio_SOURCES+=build/src/../studio/studio.o
 studio_SOURCES+=build/src/../studio/classes/studioservice.o
 studio_SOURCES+=build/src/../studio/classes/corepackages.o
@@ -295,11 +313,17 @@ studio_SOURCES+=build/src/../studio/classes/changehistoryservice.o
 build/studio$(EXEC_EXTENSION): $(studio_SOURCES) $(luau_CXX_SOURCES)
 	$(CC) -o $@ $^ $(LDFLAGS)
 
+# ====================================================================
+# Build Player
+
 player_SOURCES+=build/src/../player/player.o
 player_SOURCES+=build/src/filetypes/rbxs.o
 
 build/player$(EXEC_EXTENSION): $(player_SOURCES) $(luau_CXX_SOURCES)
 	$(CC) -o $@ $^ $(LDFLAGS)
+
+# ====================================================================
+# Build o
 
 build/%.o: %.c
 	$(CC) -c $^ $(CFLAGS) $(C_FLAGS) -o $@
@@ -307,6 +331,11 @@ build/%.o: %.c
 build/%.o: %.cpp
 	$(CXX) -c $^ $(CFLAGS) $(CXXFLAGS) -o $@
 
+# ====================================================================
+# clean (func)
+
 clean:
 	rm -rf build/*
+
+# ====================================================================
 
