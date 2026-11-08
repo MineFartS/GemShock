@@ -38,16 +38,27 @@ LDFLAGS+=-static-libstdc++
 LDFLAGS+=-static-libgcc
 endif
 
-PROGRAMS=studio player
-LIBRARIES=
-
 curl_NAME=libcurl-$(PLATFORM)
 CFLAGS+=-Ilib/$(curl_NAME)/include
 LDFLAGS+=-Llib/$(curl_NAME)/lib
 LDFLAGS+=-lcurl
 LDFLAGS+=-Wl,-rpath,lib/$(curl_NAME)/lib
 
-all: $(DISTDIR) $(DISTDIR)/src/../lib/luau/VM/src $(DISTDIR)/src/../lib/luau/Compiler/src $(DISTDIR)/src/../lib/luau/Ast/src $(DISTDIR)/src $(DISTDIR)/src/luau $(DISTDIR)/src/../lib/cJSON/src $(DISTDIR)/src/filetypes $(DISTDIR)/src/../lib/xml/src $(DISTDIR)/src/../lib/lz4/src $(DISTDIR)/src/../lib/zstd/src $(DISTDIR)/src/../studio/classes $(DISTDIR)/src/../studio $(DISTDIR)/src/../player $(foreach prog, $(PROGRAMS), $(DISTDIR)/$(prog)$(EXEC_EXTENSION)) $(foreach lib, $(LIBRARIES), $(DISTDIR)/$(lib)$(LIB_EXTENSION) $(DISTDIR)/$(lib)$(LIB_EXTENSION_STATIC)) deps
+all: $(DISTDIR) \
+	$(DISTDIR)/src/../lib/luau/VM/src \
+	$(DISTDIR)/src/../lib/luau/Compiler/src \
+	$(DISTDIR)/src/../lib/luau/Ast/src \
+	$(DISTDIR)/src \
+	$(DISTDIR)/src/luau \
+	$(DISTDIR)/src/../lib/cJSON/src \
+	$(DISTDIR)/src/filetypes $(DISTDIR)/src/../lib/xml/src \
+	$(DISTDIR)/src/../lib/lz4/src \
+	$(DISTDIR)/src/../lib/zstd/src \
+	$(DISTDIR)/src/../studio/classes \
+	$(DISTDIR)/src/../studio \
+	$(DISTDIR)/studio$(EXEC_EXTENSION) \
+	$(DISTDIR)/player$(EXEC_EXTENSION) \
+	deps
 
 DIRS := $(DISTDIR)/src/../lib/luau/VM/src \
         $(DISTDIR)/src/../lib/luau/Compiler/src \
