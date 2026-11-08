@@ -49,46 +49,21 @@ LDFLAGS+=-Wl,-rpath,lib/$(curl_NAME)/lib
 
 all: $(DISTDIR) $(DISTDIR)/src/../lib/luau/VM/src $(DISTDIR)/src/../lib/luau/Compiler/src $(DISTDIR)/src/../lib/luau/Ast/src $(DISTDIR)/src $(DISTDIR)/src/luau $(DISTDIR)/src/../lib/cJSON/src $(DISTDIR)/src/filetypes $(DISTDIR)/src/../lib/xml/src $(DISTDIR)/src/../lib/lz4/src $(DISTDIR)/src/../lib/zstd/src $(DISTDIR)/src/../studio/classes $(DISTDIR)/src/../studio $(DISTDIR)/src/../player $(foreach prog, $(PROGRAMS), $(DISTDIR)/$(prog)$(EXEC_EXTENSION)) $(foreach lib, $(LIBRARIES), $(DISTDIR)/$(lib)$(LIB_EXTENSION) $(DISTDIR)/$(lib)$(LIB_EXTENSION_STATIC)) deps
 
-$(DISTDIR)/src/../lib/luau/VM/src:
-	mkdir -p $@
-
-$(DISTDIR)/src/../lib/luau/Compiler/src:
-	mkdir -p $@
-
-$(DISTDIR)/src/../lib/luau/Ast/src:
-	mkdir -p $@
-
-$(DISTDIR)/src:
-	mkdir -p $@
-
-$(DISTDIR)/src/luau:
-	mkdir -p $@
-
-$(DISTDIR)/src/../lib/cJSON/src:
-	mkdir -p $@
-
-$(DISTDIR)/src/filetypes:
-	mkdir -p $@
-
-$(DISTDIR)/src/../lib/xml/src:
-	mkdir -p $@
-
-$(DISTDIR)/src/../lib/lz4/src:
-	mkdir -p $@
-
-$(DISTDIR)/src/../lib/zstd/src:
-	mkdir -p $@
-
-$(DISTDIR)/src/../studio/classes:
-	mkdir -p $@
-
-$(DISTDIR)/src/../studio:
-	mkdir -p $@
-
-$(DISTDIR)/src/../player:
-	mkdir -p $@
-
-$(DISTDIR):
+DIRS := $(DISTDIR)/src/../lib/luau/VM/src \
+        $(DISTDIR)/src/../lib/luau/Compiler/src \
+        $(DISTDIR)/src/../lib/luau/Ast/src \
+		$(DISTDIR)/src \
+		$(DISTDIR)/src/luau \
+		$(DISTDIR)/src/../lib/cJSON/src \
+		$(DISTDIR)/src/filetypes \
+		$(DISTDIR)/src/../lib/xml/src \
+		$(DISTDIR)/src/../lib/lz4/src \
+		$(DISTDIR)/src/../lib/zstd/src \
+		$(DISTDIR)/src/../studio/classes \
+		$(DISTDIR)/src/../studio \
+		$(DISTDIR)/src/../player \
+		$(DISTDIR)
+$(DIRS):
 	mkdir -p $@
 
 CFLAGS+=-Isrc
