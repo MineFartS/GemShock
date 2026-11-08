@@ -291,6 +291,25 @@ luau_CXX_SOURCES+=build/src/../lib/lz4/src/lz4.o
 luau_CXX_SOURCES+=build/src/../lib/zstd/src/zstd_decompress.o
 
 # ====================================================================
+# Build C
+
+build/%.o: %.c
+	gcc -c $^ $(CFLAGS) \
+		-Wno-discarded-qualifiers \
+		-Wno-incompatible-pointer-types \
+		-o $@
+
+# ====================================================================
+# Build C++
+
+build/%.o: %.cpp
+	g++ -c $^ $(CFLAGS) \
+		-DLUA_API='extern "C"' \
+		-DLUACODE_API='extern "C"' \
+		-Wno-attributes \
+		-o $@
+
+# ====================================================================
 # Build Studio
 
 studio_SOURCES+=build/src/../studio/studio.o
@@ -309,25 +328,6 @@ player_SOURCES+=build/src/filetypes/rbxs.o
 
 build/player$(EXEC_EXTENSION): $(player_SOURCES) $(luau_CXX_SOURCES)
 	gcc -o $@ $^ $(LDFLAGS)
-
-# ====================================================================
-# Build C
-
-build/%.o: %.c
-	gcc -c $^ $(CFLAGS) \
-		-Wno-discarded-qualifiers \
-		-Wno-incompatible-pointer-types \
-		-o $@
-
-# ====================================================================
-# Build C++
-
-build/%.o: %.cpp
-	g++ -c $^ $(CFLAGS) \
-		-DLUA_API='extern "C"' \
-		-DLUACODE_API='extern "C"' \
-		-Wno-attributes \
-		-o $@
 
 # ====================================================================
 
