@@ -3,54 +3,64 @@ PLATFORM?=linux64-debug
 
 .PHONY: all
 
-RAYLIB_NAME=raylib5.5-$(PLATFORM)
-
 # ====================================================================
 # Platform Specific C/C++ Flags
 
 ifeq ($(PLATFORM), linux64-debug) #==================
-EXEC_EXTENSION=-debug
-LIB_EXTENSION=-debug.so
-LIB_EXTENSION_STATIC=(null)
-RAYLIB_DLL=-lraylib
-CFLAGS+=-g
-CFLAGS+=-D DEBUG
-CFLAGS+=-D EXEC_EXTENSION=\"-debug\"
-CFLAGS+=-D LIB_EXTENSION=\"-debug.so\"
-LDFLAGS+=-rdynamic
+
+	EXEC_EXTENSION=-debug
+
+	LIB_EXTENSION=-debug.so
+	LIB_EXTENSION_STATIC=(null)
+
+	RAYLIB_DLL=-lraylib
+
+	CFLAGS+=\
+		-g \
+		-D DEBUG \
+		-D EXEC_EXTENSION=\"-debug\" \
+		-D LIB_EXTENSION=\"-debug.so\"
+
+	LDFLAGS+=-rdynamic
+
 endif # =============================================
 
 ifeq ($(PLATFORM), win64) # =========================
-EXEC_EXTENSION=.exe
-LIB_EXTENSION=.dll
-LIB_EXTENSION_STATIC=(null)
 
-SHELL=sh.exe
+	EXEC_EXTENSION=.exe
 
-RAYLIB_DLL=-lraylibdll
-CFLAGS+=-O2
-CFLAGS+=-D RELEASE
-CFLAGS+=-D EXEC_EXTENSION=\".exe\"
-CFLAGS+=-D LIB_EXTENSION=\".dll\"
-LDFLAGS+=-lws2_32
-LDFLAGS+=-static-libstdc++
-LDFLAGS+=-static-libgcc
+	LIB_EXTENSION=.dll
+	LIB_EXTENSION_STATIC=(null)
+
+	SHELL=sh.exe
+
+	RAYLIB_DLL=-lraylibdll
+
+	CFLAGS+=\
+		-O2 \
+		-D RELEASE \
+		-D EXEC_EXTENSION=\".exe\" \
+		-D LIB_EXTENSION=\".dll\"
+
+	LDFLAGS+=\
+		-lws2_32 \
+		-static-libstdc++ \
+		-static-libgcc
+
 endif # =============================================
-
-curl_NAME=libcurl-$(PLATFORM)
 
 # ====================================================================
 # LDFLAGS
 
-LDFLAGS+=-Llib/$(curl_NAME)/lib
-LDFLAGS+=-lcurl
-LDFLAGS+=-Wl,-rpath,lib/$(curl_NAME)/lib
-LDFLAGS+=-lcurl
-LDFLAGS+=-lm
-LDFLAGS+=-Llib/$(RAYLIB_NAME)/lib
-LDFLAGS+=$(RAYLIB_DLL)
-LDFLAGS+=-Wl,-rpath,lib/$(RAYLIB_NAME)/lib
-LDFLAGS+=-lstdc++
+LDFLAGS+=\
+	-Llib/libcurl-$(PLATFORM)/lib \
+	-lcurl \
+	-Wl,-rpath,lib/libcurl-$(PLATFORM)/lib \
+	-lm \
+	-Llib/raylib5.5-$(PLATFORM)/lib \
+	$(RAYLIB_DLL) \
+	-Wl,-rpath,lib/raylib5.5-$(PLATFORM)/lib \
+	-lstdc++
 
 # ====================================================================
 # all (func)
@@ -74,221 +84,222 @@ all: build \
 # ====================================================================
 # Mk Build Dirs
 
-DIRS := build/src/../lib/luau/VM/src \
-        build/src/../lib/luau/Compiler/src \
-        build/src/../lib/luau/Ast/src \
-		build/src \
-		build/src/luau \
-		build/src/../lib/cJSON/src \
-		build/src/filetypes \
-		build/src/../lib/xml/src \
-		build/src/../lib/lz4/src \
-		build/src/../lib/zstd/src \
-		build/src/../studio/classes \
-		build/src/../studio \
-		build/src/../player \
-		build
+DIRS := \
+	build/src/../lib/luau/VM/src \
+	build/src/../lib/luau/Compiler/src \
+	build/src/../lib/luau/Ast/src \
+	build/src \
+	build/src/luau \
+	build/src/../lib/cJSON/src \
+	build/src/filetypes \
+	build/src/../lib/xml/src \
+	build/src/../lib/lz4/src \
+	build/src/../lib/zstd/src \
+	build/src/../studio/classes \
+	build/src/../studio \
+	build/src/../player \
+	build
 $(DIRS):
 	mkdir -p $@
 
 # ====================================================================
 # CFLAGS
 
-CFLAGS+=-Ilib/$(curl_NAME)/include
-CFLAGS+=-Isrc
-CFLAGS+=-Iinclude
-CFLAGS+=-Ilib/xml/src
-CFLAGS+=-Ilib/xml/include
-CFLAGS+=-Ilib/lz4/src
-CFLAGS+=-Ilib/lz4/include
-CFLAGS+=-Ilib/cJSON/src
-CFLAGS+=-Ilib/cJSON/include
-CFLAGS+=-Ilib/mini_gzip/src
-CFLAGS+=-Ilib/mini_gzip/include
-CFLAGS+=-Ilib/zstd/src
-CFLAGS+=-Ilib/zstd/include
-CFLAGS+=-D PLATFORM=\"$(PLATFORM)\"
-CFLAGS+=-Iinclude
-CFLAGS+=-Ilib/xml/include
-CFLAGS+=-Ilib/luau/VM/include
-CFLAGS+=-Ilib/luau/Compiler/include
-CFLAGS+=-Ilib/luau/Common/include
-CFLAGS+=-Ilib/luau/Ast/include
-CFLAGS+=-Ilib/luau/VM/src
-CFLAGS+=-Ilib/$(RAYLIB_NAME)/include
+CFLAGS+=\
+	-Ilib/libcurl-$(PLATFORM)/include \
+	-Isrc \
+	-Iinclude \
+	-Ilib/xml/src \
+	-Ilib/xml/include \
+	-Ilib/lz4/src \
+	-Ilib/lz4/include \
+	-Ilib/cJSON/src \
+	-Ilib/cJSON/include \
+	-Ilib/mini_gzip/src \
+	-Ilib/mini_gzip/include \
+	-Ilib/zstd/src \
+	-Ilib/zstd/include \
+	-D PLATFORM=\"$(PLATFORM)\" \
+	-Ilib/luau/VM/include \
+	-Ilib/luau/Compiler/include \
+	-Ilib/luau/Common/include \
+	-Ilib/luau/Ast/include \
+	-Ilib/luau/VM/src \
+	-Ilib/raylib5.5-$(PLATFORM)/include
 
 # ====================================================================
 # luau_CXX_SOURCES
 
-luau_CXX_SOURCES+=build/src/../lib/luau/VM/src/lapi.o
-luau_CXX_SOURCES+=build/src/../lib/luau/VM/src/laux.o
-luau_CXX_SOURCES+=build/src/../lib/luau/VM/src/lbaselib.o
-luau_CXX_SOURCES+=build/src/../lib/luau/VM/src/lbitlib.o
-luau_CXX_SOURCES+=build/src/../lib/luau/VM/src/lbuffer.o
-luau_CXX_SOURCES+=build/src/../lib/luau/VM/src/lbuflib.o
-luau_CXX_SOURCES+=build/src/../lib/luau/VM/src/lbuiltins.o
-luau_CXX_SOURCES+=build/src/../lib/luau/VM/src/lcorolib.o
-luau_CXX_SOURCES+=build/src/../lib/luau/VM/src/ldblib.o
-luau_CXX_SOURCES+=build/src/../lib/luau/VM/src/ldebug.o
-luau_CXX_SOURCES+=build/src/../lib/luau/VM/src/ldo.o
-luau_CXX_SOURCES+=build/src/../lib/luau/VM/src/lfunc.o
-luau_CXX_SOURCES+=build/src/../lib/luau/VM/src/lgc.o
-luau_CXX_SOURCES+=build/src/../lib/luau/VM/src/lgcdebug.o
-luau_CXX_SOURCES+=build/src/../lib/luau/VM/src/linit.o
-luau_CXX_SOURCES+=build/src/../lib/luau/VM/src/lmathlib.o
-luau_CXX_SOURCES+=build/src/../lib/luau/VM/src/lmem.o
-luau_CXX_SOURCES+=build/src/../lib/luau/VM/src/lnumprint.o
-luau_CXX_SOURCES+=build/src/../lib/luau/VM/src/lobject.o
-luau_CXX_SOURCES+=build/src/../lib/luau/VM/src/loslib.o
-luau_CXX_SOURCES+=build/src/../lib/luau/VM/src/lperf.o
-luau_CXX_SOURCES+=build/src/../lib/luau/VM/src/lstate.o
-luau_CXX_SOURCES+=build/src/../lib/luau/VM/src/lstring.o
-luau_CXX_SOURCES+=build/src/../lib/luau/VM/src/lstrlib.o
-luau_CXX_SOURCES+=build/src/../lib/luau/VM/src/ltable.o
-luau_CXX_SOURCES+=build/src/../lib/luau/VM/src/ltablib.o
-luau_CXX_SOURCES+=build/src/../lib/luau/VM/src/ltm.o
-luau_CXX_SOURCES+=build/src/../lib/luau/VM/src/ludata.o
-luau_CXX_SOURCES+=build/src/../lib/luau/VM/src/lutf8lib.o
-luau_CXX_SOURCES+=build/src/../lib/luau/VM/src/lveclib.o
-luau_CXX_SOURCES+=build/src/../lib/luau/VM/src/lvmexecute.o
-luau_CXX_SOURCES+=build/src/../lib/luau/VM/src/lvmload.o
-luau_CXX_SOURCES+=build/src/../lib/luau/VM/src/lvmutils.o
-luau_CXX_SOURCES+=build/src/../lib/luau/Compiler/src/BuiltinFolding.o
-luau_CXX_SOURCES+=build/src/../lib/luau/Compiler/src/Builtins.o
-luau_CXX_SOURCES+=build/src/../lib/luau/Compiler/src/BytecodeBuilder.o
-luau_CXX_SOURCES+=build/src/../lib/luau/Compiler/src/Compiler.o
-luau_CXX_SOURCES+=build/src/../lib/luau/Compiler/src/ConstantFolding.o
-luau_CXX_SOURCES+=build/src/../lib/luau/Compiler/src/CostModel.o
-luau_CXX_SOURCES+=build/src/../lib/luau/Compiler/src/lcode.o
-luau_CXX_SOURCES+=build/src/../lib/luau/Compiler/src/TableShape.o
-luau_CXX_SOURCES+=build/src/../lib/luau/Compiler/src/Types.o
-luau_CXX_SOURCES+=build/src/../lib/luau/Compiler/src/ValueTracking.o
-luau_CXX_SOURCES+=build/src/../lib/luau/Ast/src/Allocator.o
-luau_CXX_SOURCES+=build/src/../lib/luau/Ast/src/Ast.o
-luau_CXX_SOURCES+=build/src/../lib/luau/Ast/src/Confusables.o
-luau_CXX_SOURCES+=build/src/../lib/luau/Ast/src/Cst.o
-luau_CXX_SOURCES+=build/src/../lib/luau/Ast/src/Lexer.o
-luau_CXX_SOURCES+=build/src/../lib/luau/Ast/src/Location.o
-luau_CXX_SOURCES+=build/src/../lib/luau/Ast/src/Parser.o
-luau_CXX_SOURCES+=build/src/../lib/luau/Ast/src/StringUtils.o
-luau_CXX_SOURCES+=build/src/../lib/luau/Ast/src/TimeTrace.o
-luau_CXX_SOURCES+=build/src/datamodel.o
-luau_CXX_SOURCES+=build/src/instance.o
-luau_CXX_SOURCES+=build/src/rbxscriptsignal.o
-luau_CXX_SOURCES+=build/src/workspace.o
-luau_CXX_SOURCES+=build/src/serviceprovider.o
-luau_CXX_SOURCES+=build/src/rootinstance.o
-luau_CXX_SOURCES+=build/src/model.o
-luau_CXX_SOURCES+=build/src/pvinstance.o
-luau_CXX_SOURCES+=build/src/trusspart.o
-luau_CXX_SOURCES+=build/src/basepart.o
-luau_CXX_SOURCES+=build/src/part.o
-luau_CXX_SOURCES+=build/src/formfactorpart.o
-luau_CXX_SOURCES+=build/src/camera.o
-luau_CXX_SOURCES+=build/src/brickcolor.o
-luau_CXX_SOURCES+=build/src/meshcontentprovider.o
-luau_CXX_SOURCES+=build/src/cacheablecontentprovider.o
-luau_CXX_SOURCES+=build/src/physicalcharacter.o
-luau_CXX_SOURCES+=build/src/lighting.o
-luau_CXX_SOURCES+=build/src/wedgepart.o
-luau_CXX_SOURCES+=build/src/valuebase.o
-luau_CXX_SOURCES+=build/src/vector3value.o
-luau_CXX_SOURCES+=build/src/cylindermesh.o
-luau_CXX_SOURCES+=build/src/bevelmesh.o
-luau_CXX_SOURCES+=build/src/datamodelmesh.o
-luau_CXX_SOURCES+=build/src/runservice.o
-luau_CXX_SOURCES+=build/src/serverscriptservice.o
-luau_CXX_SOURCES+=build/src/luasourcecontainer.o
-luau_CXX_SOURCES+=build/src/basescript.o
-luau_CXX_SOURCES+=build/src/script.o
-luau_CXX_SOURCES+=build/src/specialmesh.o
-luau_CXX_SOURCES+=build/src/filemesh.o
-luau_CXX_SOURCES+=build/src/decal.o
-luau_CXX_SOURCES+=build/src/faceinstance.o
-luau_CXX_SOURCES+=build/src/../lib/cJSON/src/cJSON.o
-luau_CXX_SOURCES+=build/src/httpservice.o
-luau_CXX_SOURCES+=build/src/numbervalue.o
-luau_CXX_SOURCES+=build/src/folder.o
-luau_CXX_SOURCES+=build/src/trianglemeshpart.o
-luau_CXX_SOURCES+=build/src/meshpart.o
-luau_CXX_SOURCES+=build/src/texturecontentprovider.o
-luau_CXX_SOURCES+=build/src/players.o
-luau_CXX_SOURCES+=build/src/player.o
-luau_CXX_SOURCES+=build/src/stringvalue.o
-luau_CXX_SOURCES+=build/src/spawnlocation.o
-luau_CXX_SOURCES+=build/src/modulescript.o
-luau_CXX_SOURCES+=build/src/localscript.o
-luau_CXX_SOURCES+=build/src/starterplayerscripts.o
-luau_CXX_SOURCES+=build/src/starterplayer.o
-luau_CXX_SOURCES+=build/src/playerscripts.o
-luau_CXX_SOURCES+=build/src/accessory.o
-luau_CXX_SOURCES+=build/src/accoutrement.o
-luau_CXX_SOURCES+=build/src/startercharacterscripts.o
-luau_CXX_SOURCES+=build/src/testservice.o
-luau_CXX_SOURCES+=build/src/localizationtable.o
-luau_CXX_SOURCES+=build/src/plugin.o
-luau_CXX_SOURCES+=build/src/baseplayergui.o
-luau_CXX_SOURCES+=build/src/coregui.o
-luau_CXX_SOURCES+=build/src/collectionservice.o
-luau_CXX_SOURCES+=build/src/textservice.o
-luau_CXX_SOURCES+=build/src/guiservice.o
-luau_CXX_SOURCES+=build/src/rbxanalyticsservice.o
-luau_CXX_SOURCES+=build/src/contentprovider.o
-luau_CXX_SOURCES+=build/src/stylebase.o
-luau_CXX_SOURCES+=build/src/stylerule.o
-luau_CXX_SOURCES+=build/src/stylingservice.o
-luau_CXX_SOURCES+=build/src/tweenservice.o
-luau_CXX_SOURCES+=build/src/genericsettings.o
-luau_CXX_SOURCES+=build/src/globalsettings.o
-luau_CXX_SOURCES+=build/src/studiowidgetsservice.o
-luau_CXX_SOURCES+=build/src/startpageservice.o
-luau_CXX_SOURCES+=build/src/studiouserservice.o
-luau_CXX_SOURCES+=build/src/messagebusservice.o
-luau_CXX_SOURCES+=build/src/guibase.o
-luau_CXX_SOURCES+=build/src/guibase2d.o
-luau_CXX_SOURCES+=build/src/guiobject.o
-luau_CXX_SOURCES+=build/src/frame.o
-luau_CXX_SOURCES+=build/src/studio.o
-luau_CXX_SOURCES+=build/src/standalonepluginscripts.o
-luau_CXX_SOURCES+=build/src/boolvalue.o
-luau_CXX_SOURCES+=build/src/studiotheme.o
-luau_CXX_SOURCES+=build/src/stylesheet.o
-luau_CXX_SOURCES+=build/src/mouse.o
-luau_CXX_SOURCES+=build/src/pluginmouse.o
-luau_CXX_SOURCES+=build/src/humanoid.o
-luau_CXX_SOURCES+=build/src/localizationservice.o
-luau_CXX_SOURCES+=build/src/userinputservice.o
-luau_CXX_SOURCES+=build/src/translator.o
-luau_CXX_SOURCES+=build/src/renderer.o
-luau_CXX_SOURCES+=build/src/scriptruntime.o
-luau_CXX_SOURCES+=build/src/luau/disassembler.o
-luau_CXX_SOURCES+=build/src/luau/cframe.o
-luau_CXX_SOURCES+=build/src/luau/color3.o
-luau_CXX_SOURCES+=build/src/luau/dockwidgetpluginguiinfo.o
-luau_CXX_SOURCES+=build/src/luau/enum.o
-luau_CXX_SOURCES+=build/src/luau/event.o
-luau_CXX_SOURCES+=build/src/luau/globals.o
-luau_CXX_SOURCES+=build/src/luau/instance.o
-luau_CXX_SOURCES+=build/src/luau/rect.o
-luau_CXX_SOURCES+=build/src/luau/serialize.o
-luau_CXX_SOURCES+=build/src/luau/state.o
-luau_CXX_SOURCES+=build/src/luau/tweeninfo.o
-luau_CXX_SOURCES+=build/src/luau/udim2.o
-luau_CXX_SOURCES+=build/src/luau/udim.o
-luau_CXX_SOURCES+=build/src/luau/vector2.o
-luau_CXX_SOURCES+=build/src/luau/vector3.o
-luau_CXX_SOURCES+=build/src/luau/numbersequence.o
-luau_CXX_SOURCES+=build/src/luau/font.o
-luau_CXX_SOURCES+=build/src/luau/path2dcontrolpoint.o
-luau_CXX_SOURCES+=build/src/luau/numberrange.o
-luau_CXX_SOURCES+=build/src/luau/colorsequence.o
-luau_CXX_SOURCES+=build/src/luau/brickcolor.o
-luau_CXX_SOURCES+=build/src/filetypes/rbxlx.o
-luau_CXX_SOURCES+=build/src/filetypes/rbxmx.o
-luau_CXX_SOURCES+=build/src/../lib/xml/src/xml.o
-luau_CXX_SOURCES+=build/src/filetypes/rbxm.o
-luau_CXX_SOURCES+=build/src/../lib/lz4/src/lz4.o
-luau_CXX_SOURCES+=build/src/../lib/zstd/src/zstd_decompress.o
+luau_CXX_SOURCES+=\
+	build/src/../lib/luau/VM/src/lapi.o \
+	build/src/../lib/luau/VM/src/laux.o \
+	build/src/../lib/luau/VM/src/lbaselib.o \
+	build/src/../lib/luau/VM/src/lbitlib.o \
+	build/src/../lib/luau/VM/src/lbuffer.o \
+	build/src/../lib/luau/VM/src/lbuflib.o \
+	build/src/../lib/luau/VM/src/lbuiltins.o \
+	build/src/../lib/luau/VM/src/lcorolib.o \
+	build/src/../lib/luau/VM/src/ldblib.o \
+	build/src/../lib/luau/VM/src/ldebug.o \
+	build/src/../lib/luau/VM/src/ldo.o \
+	build/src/../lib/luau/VM/src/lfunc.o \
+	build/src/../lib/luau/VM/src/lgc.o \
+	build/src/../lib/luau/VM/src/lgcdebug.o \
+	build/src/../lib/luau/VM/src/linit.o \
+	build/src/../lib/luau/VM/src/lmathlib.o \
+	build/src/../lib/luau/VM/src/lmem.o \
+	build/src/../lib/luau/VM/src/lnumprint.o \
+	build/src/../lib/luau/VM/src/lobject.o \
+	build/src/../lib/luau/VM/src/loslib.o \
+	build/src/../lib/luau/VM/src/lperf.o \
+	build/src/../lib/luau/VM/src/lstate.o \
+	build/src/../lib/luau/VM/src/lstring.o \
+	build/src/../lib/luau/VM/src/lstrlib.o \
+	build/src/../lib/luau/VM/src/ltable.o \
+	build/src/../lib/luau/VM/src/ltablib.o \
+	build/src/../lib/luau/VM/src/ltm.o \
+	build/src/../lib/luau/VM/src/ludata.o \
+	build/src/../lib/luau/VM/src/lutf8lib.o \
+	build/src/../lib/luau/VM/src/lveclib.o \
+	build/src/../lib/luau/VM/src/lvmexecute.o \
+	build/src/../lib/luau/VM/src/lvmload.o \
+	build/src/../lib/luau/VM/src/lvmutils.o \
+	build/src/../lib/luau/Compiler/src/BuiltinFolding.o \
+	build/src/../lib/luau/Compiler/src/Builtins.o \
+	build/src/../lib/luau/Compiler/src/BytecodeBuilder.o \
+	build/src/../lib/luau/Compiler/src/Compiler.o \
+	build/src/../lib/luau/Compiler/src/ConstantFolding.o \
+	build/src/../lib/luau/Compiler/src/CostModel.o \
+	build/src/../lib/luau/Compiler/src/lcode.o \
+	build/src/../lib/luau/Compiler/src/TableShape.o \
+	build/src/../lib/luau/Compiler/src/Types.o \
+	build/src/../lib/luau/Compiler/src/ValueTracking.o \
+	build/src/../lib/luau/Ast/src/Allocator.o \
+	build/src/../lib/luau/Ast/src/Ast.o \
+	build/src/../lib/luau/Ast/src/Confusables.o \
+	build/src/../lib/luau/Ast/src/Cst.o \
+	build/src/../lib/luau/Ast/src/Lexer.o \
+	build/src/../lib/luau/Ast/src/Location.o \
+	build/src/../lib/luau/Ast/src/Parser.o \
+	build/src/../lib/luau/Ast/src/StringUtils.o \
+	build/src/../lib/luau/Ast/src/TimeTrace.o \
+	build/src/datamodel.o \
+	build/src/instance.o \
+	build/src/rbxscriptsignal.o \
+	build/src/workspace.o \
+	build/src/serviceprovider.o \
+	build/src/rootinstance.o \
+	build/src/model.o \
+	build/src/pvinstance.o \
+	build/src/trusspart.o \
+	build/src/basepart.o \
+	build/src/part.o \
+	build/src/formfactorpart.o \
+	build/src/camera.o \
+	build/src/brickcolor.o \
+	build/src/meshcontentprovider.o \
+	build/src/cacheablecontentprovider.o \
+	build/src/physicalcharacter.o \
+	build/src/lighting.o \
+	build/src/wedgepart.o \
+	build/src/valuebase.o \
+	build/src/vector3value.o \
+	build/src/cylindermesh.o \
+	build/src/bevelmesh.o \
+	build/src/datamodelmesh.o \
+	build/src/runservice.o \
+	build/src/serverscriptservice.o \
+	build/src/luasourcecontainer.o \
+	build/src/basescript.o \
+	build/src/script.o \
+	build/src/specialmesh.o \
+	build/src/filemesh.o \
+	build/src/decal.o \
+	build/src/faceinstance.o \
+	build/src/../lib/cJSON/src/cJSON.o \
+	build/src/httpservice.o \
+	build/src/numbervalue.o \
+	build/src/folder.o \
+	build/src/trianglemeshpart.o \
+	build/src/meshpart.o \
+	build/src/texturecontentprovider.o \
+	build/src/players.o \
+	build/src/player.o \
+	build/src/stringvalue.o \
+	build/src/spawnlocation.o \
+	build/src/modulescript.o \
+	build/src/localscript.o \
+	build/src/starterplayerscripts.o \
+	build/src/starterplayer.o \
+	build/src/playerscripts.o \
+	build/src/accessory.o \
+	build/src/accoutrement.o \
+	build/src/startercharacterscripts.o \
+	build/src/testservice.o \
+	build/src/localizationtable.o \
+	build/src/plugin.o \
+	build/src/baseplayergui.o \
+	build/src/coregui.o \
+	build/src/collectionservice.o \
+	build/src/textservice.o \
+	build/src/guiservice.o \
+	build/src/rbxanalyticsservice.o \
+	build/src/contentprovider.o \
+	build/src/stylebase.o \
+	build/src/stylerule.o \
+	build/src/stylingservice.o \
+	build/src/tweenservice.o \
+	build/src/genericsettings.o \
+	build/src/globalsettings.o \
+	build/src/studiowidgetsservice.o \
+	build/src/startpageservice.o \
+	build/src/studiouserservice.o \
+	build/src/messagebusservice.o \
+	build/src/guibase.o \
+	build/src/guibase2d.o \
+	build/src/guiobject.o \
+	build/src/frame.o \
+	build/src/studio.o \
+	build/src/standalonepluginscripts.o \
+	build/src/boolvalue.o \
+	build/src/studiotheme.o \
+	build/src/stylesheet.o \
+	build/src/mouse.o \
+	build/src/pluginmouse.o \
+	build/src/humanoid.o \
+	build/src/localizationservice.o \
+	build/src/userinputservice.o \
+	build/src/translator.o \
+	build/src/renderer.o \
+	build/src/scriptruntime.o \
+	build/src/luau/disassembler.o \
+	build/src/luau/cframe.o \
+	build/src/luau/color3.o \
+	build/src/luau/dockwidgetpluginguiinfo.o \
+	build/src/luau/enum.o \
+	build/src/luau/event.o \
+	build/src/luau/globals.o \
+	build/src/luau/instance.o \
+	build/src/luau/rect.o \
+	build/src/luau/serialize.o \
+	build/src/luau/state.o \
+	build/src/luau/tweeninfo.o \
+	build/src/luau/udim2.o \
+	build/src/luau/udim.o \
+	build/src/luau/vector2.o \
+	build/src/luau/vector3.o \
+	build/src/luau/numbersequence.o \
+	build/src/luau/font.o \
+	build/src/luau/path2dcontrolpoint.o \
+	build/src/luau/numberrange.o \
+	build/src/luau/colorsequence.o \
+	build/src/luau/brickcolor.o \
+	build/src/filetypes/rbxlx.o \
+	build/src/filetypes/rbxmx.o \
+	build/src/../lib/xml/src/xml.o \
+	build/src/filetypes/rbxm.o \
+	build/src/../lib/lz4/src/lz4.o \
+	build/src/../lib/zstd/src/zstd_decompress.o
 
 # ====================================================================
 # Build C
@@ -312,21 +323,21 @@ build/%.o: %.cpp
 # ====================================================================
 # Build Studio
 
-studio_SOURCES+=build/src/../studio/studio.o
-studio_SOURCES+=build/src/../studio/classes/studioservice.o
-studio_SOURCES+=build/src/../studio/classes/corepackages.o
-studio_SOURCES+=build/src/../studio/classes/changehistoryservice.o
-
-build/studio$(EXEC_EXTENSION): $(studio_SOURCES) $(luau_CXX_SOURCES)
+build/studio$(EXEC_EXTENSION): \
+	build/src/../studio/studio.o \
+	build/src/../studio/classes/studioservice.o \
+	build/src/../studio/classes/corepackages.o \
+	build/src/../studio/classes/changehistoryservice.o \
+	$(luau_CXX_SOURCES)
 	gcc -o $@ $^ $(LDFLAGS)
 
 # ====================================================================
 # Build Player
 
-player_SOURCES+=build/src/../player/player.o
-player_SOURCES+=build/src/filetypes/rbxs.o
-
-build/player$(EXEC_EXTENSION): $(player_SOURCES) $(luau_CXX_SOURCES)
+build/player$(EXEC_EXTENSION): \
+	build/src/../player/player.o \
+	build/src/filetypes/rbxs.o \
+	$(luau_CXX_SOURCES)
 	gcc -o $@ $^ $(LDFLAGS)
 
 # ====================================================================
