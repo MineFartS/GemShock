@@ -13,3 +13,7 @@
 	path = lib/OpenRBLX/lib/luau
 	url = https://github.com/luau-lang/luau
 
+[submodule "lib/philh_myftp_biz"]
+	path = lib/philh_myftp_biz
+	url = https://github.com/philh-myftp-biz/PowershellPackage
+

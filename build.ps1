@@ -1,5 +1,6 @@
 param([switch]$Force)
-Push-Location $PSScriptRoot
+Import-Module "$PSScriptRoot\lib\philh_myftp_biz\philh_myftp_biz.psm1" -Force
+Invoke-AtPath $PSScriptRoot {
 
 if ($Force) {
     Remove-Item "GemShock.rbxlx" -Force
@@ -15,23 +16,23 @@ if (-not (Test-Path "GemShock.rbxlx")) {
     & lib\argon.exe build -o "GemShock.rbxlx"
 }
 
-Push-Location "$PSScriptRoot\lib\OpenRBLX\lib\luau\build\release" #========
+Invoke-AtPath "$PSScriptRoot\lib\OpenRBLX\lib\luau\build\release" {
 
-if (-not (Test-Path "libluau.a")) {
+    if (-not (Test-Path "libluau.a")) {
 
-    make.exe config=release -C '..\..'
+        make.exe config=release -C '..\..'
 
-    ar.exe x libluauvm.a
-    ar.exe x libluaucompiler.a
-    ar.exe x libluauast.a
-    ar.exe rcs libluau.a *.o
+        ar.exe x libluauvm.a
+        ar.exe x libluaucompiler.a
+        ar.exe x libluauast.a
+        ar.exe rcs libluau.a *.o
 
-}
+    }
 
-Pop-Location #=============================================
+};
 
 make.exe `
     -C lib/OpenRBLX `
     PLATFORM=win64
 
-Pop-Location
+};
