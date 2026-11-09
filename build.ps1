@@ -18,14 +18,9 @@ if (-not (Test-Path "GemShock.rbxlx")) {
 
 Invoke-AtPath "$PSScriptRoot\lib\OpenRBLX\lib\luau\build\release" {
 
-    if (-not (Test-Path "libluau.a")) {
+    if ((Get-ChildItem -Filter *.a).Length -lt 9) {
 
         make.exe config=release -C '..\..'
-
-        ar.exe x libluauvm.a
-        ar.exe x libluaucompiler.a
-        ar.exe x libluauast.a
-        ar.exe rcs libluau.a *.o
 
     }
 

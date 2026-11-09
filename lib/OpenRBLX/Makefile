@@ -60,7 +60,7 @@ LDFLAGS+=\
 	-Llib/raylib5.5-$(PLATFORM)/lib \
 	$(RAYLIB_DLL) \
 	-Wl,-rpath,lib/raylib5.5-$(PLATFORM)/lib \
-	lib/luau/build/release/libluau.a \
+	-Wl,--start-group $(wildcard lib/luau/build/release/*.a) -Wl,--end-group \
 	-lstdc++
 
 # ====================================================================
