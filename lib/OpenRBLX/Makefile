@@ -13,8 +13,6 @@ ifeq ($(PLATFORM), linux64-debug) #==================
 	LIB_EXTENSION=-debug.so
 	LIB_EXTENSION_STATIC=(null)
 
-	RAYLIB_DLL=-lraylib
-
 	CFLAGS+=\
 		-g \
 		-D DEBUG \
@@ -33,8 +31,6 @@ ifeq ($(PLATFORM), win64) # =========================
 	LIB_EXTENSION_STATIC=(null)
 
 	SHELL=sh.exe
-
-	RAYLIB_DLL=-lraylibdll
 
 	CFLAGS+=\
 		-O2 \
@@ -57,10 +53,13 @@ LDFLAGS+=\
 	-lcurl \
 	-Wl,-rpath,lib/libcurl-$(PLATFORM)/lib \
 	-lm \
-	-Llib/raylib5.5-$(PLATFORM)/lib \
-	$(RAYLIB_DLL) \
-	-Wl,-rpath,lib/raylib5.5-$(PLATFORM)/lib \
-	-Wl,--start-group $(wildcard lib/luau/build/release/*.a) -Wl,--end-group \
+	-Wl,--start-group \
+		$(wildcard lib/raylib5.5-$(PLATFORM)/lib/*.a) \
+		$(wildcard lib/luau/build/release/*.a) \
+		-lopengl32 \
+		-lgdi32 \
+		-lwinmm \
+		-Wl,--end-group \
 	-lstdc++
 
 # ====================================================================
